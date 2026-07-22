@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@theme {
+  --font-pirate: var(--font-pirate-local), Georgia, serif;
+  --font-cinzel: var(--font-cinzel-local), Georgia, serif;
+  --font-script: var(--font-great-vibes), cursive;
+  --font-rocker: var(--font-new-rocker), Georgia, serif;
+}
+
+.font-pirate {
+  font-family: var(--font-pirate-local), Georgia, serif;
+  letter-spacing: 0.04em;
+}
+
+.font-cinzel {
+  font-family: var(--font-cinzel-local), Georgia, serif;
+}
+
+.font-rocker{
+    font-family: var(--font-rocker), Georgia, 'Times New Roman', Times, serif;
+}
+
+.font-script {
+  font-family: var(--font-great-vibes), 'Brush Script MT', cursive;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #1c130d;
+}
+::-webkit-scrollbar-thumb {
+  background: #8b1e1b;
+  border-radius: 4px;
+  border: 1px solid #d97706;
+}
+
+/* Parchment Background Texture */
+.parchment-bg {
+  background-color: #f5eedc;
+  background-image:
+    radial-gradient(#e4d3b0 1px, transparent 1px),
+    radial-gradient(#dbc59c 1px, #f5eedc 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  box-shadow: inset 0 0 80px rgba(74, 38, 14, 0.12);
+}
+
+.parchment-card {
+  background: linear-gradient(145deg, #faf4e6 0%, #ede0c4 100%);
+  /*border: 1.5px solid #c8a355;*/
+  box-shadow: 0 8px 25px rgba(45, 23, 11, 0.12), inset 0 0 15px rgba(212, 175, 55, 0.08);
+}
+
+/* Wood Plank Texture */
+.wood-nav-bg {
+  background: linear-gradient(180deg, #23160e 0%, #150c07 100%);
+  border-bottom: 2px solid #5a351a;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+.wood-banner-dark {
+  background: linear-gradient(180deg, #2a1a10 0%, #190f09 100%);
+  border: 1px solid #6b4324;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.wood-banner-crimson {
+  background: linear-gradient(180deg, #8c1d1a 0%, #61100e 100%);
+  border: 1px solid #b8322e;
+  box-shadow: 0 4px 15px rgba(139, 30, 27, 0.4);
+}
+
+/* Crimson Pirate Button */
+.btn-crimson {
+  background: linear-gradient(180deg, #991f1c 0%, #6e1311 100%);
+  border: 1.5px solid #d4af37;
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  box-shadow: 0 4px 15px rgba(139, 30, 27, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-crimson:hover {
+  background: linear-gradient(180deg, #b82622 0%, #821715 100%);
+  box-shadow: 0 6px 22px rgba(184, 38, 34, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Keyframe animations */
+@keyframes float-subtle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-float-subtle {
+  animation: float-subtle 4s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 25s linear infinite;
+}
+
+.animate-spin-slow:hover {
+  animation-play-state: paused;
+}
+
+/* Red Treasure X Glow */
+.treasure-x {
+  color: #a81c19;
+  text-shadow: 0 0 8px rgba(168, 28, 25, 0.4);
+}

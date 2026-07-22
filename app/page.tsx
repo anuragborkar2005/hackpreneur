@@ -1,0 +1,178 @@
+"use client";
+
+import React, { useState } from "react";
+import Navbar from "./components/Navbar";
+import CountdownTimer from "./components/CountdownTimer";
+import ParchmentRibbon from "./components/ParchmentRibbon";
+import BountyTracks from "./components/BountyTracks";
+import ScheduleSection from "./components/ScheduleSection";
+import FaqSection from "./components/FaqSection";
+import AboutSection from "./components/AboutSection";
+import AchievementsSection from "./components/AchievementsSection";
+import PastEventsSection from "./components/PastEventsSection";
+import BlurSeparator from "./components/BlurSeparator";
+import FooterSection from "./components/FooterSection";
+import RegistrationModal from "./components/RegistrationModal";
+import AmbientAudio from "./components/AmbientAudio";
+
+export default function Home() {
+  const [isRegisterOpen, setIsRegisterOpen] = useState(false);
+  const [selectedTrack, setSelectedTrack] = useState<string>("ai-captains");
+  const [soundEnabled, setSoundEnabled] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+
+  const handleOpenTrackModal = (track: any) => {
+    setSelectedTrack(track.id);
+    setIsRegisterOpen(true);
+  };
+
+  return (
+    <div className="relative min-h-screen bg-[#faf4e5] text-[#1e120d] flex flex-col font-sans overflow-x-hidden selection:bg-amber-900/30 selection:text-amber-900">
+      {/* AMBIENT AUDIO SYNTH */}
+      <AmbientAudio enabled={soundEnabled} />
+
+      {/* TOP NAVIGATION BAR */}
+      <Navbar
+        onOpenRegister={() => setIsRegisterOpen(true)}
+        soundEnabled={soundEnabled}
+        onToggleSound={() => setSoundEnabled(!soundEnabled)}
+        activeSection={activeSection}
+        setActiveSection={setActiveSection}
+      />
+
+      <main className="flex-1 flex flex-col pt-20">
+        <section
+          id="home"
+          className="relative isolate w-full min-h-screen flex flex-col justify-between overflow-hidden"
+        >
+          {/* SVG / Pirate Hero Background */}
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-10 scale-105 origin-center brightness-[1.02] contrast-[1.02]"
+            style={{ backgroundImage: "url('/hero.svg')" }}
+          >
+            {/* Subtle Gradient Overlays for text legibility */}
+            <div className="absolute inset-0 bg-linear-to-r from-[#faf4e5]/95 via-[#faf4e5]/80 to-transparent md:w-3/5 lg:w-1/2" />
+            <div className="absolute inset-0 bg-linear-to-t from-[#faf4e5] via-transparent to-transparent bottom-0" />
+          </div>
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12 w-full flex-1 flex flex-col justify-center">
+            <div className="max-w-2xl">
+              {/* TOP SCROLL BADGE */}
+              <div className="inline-flex items-center gap-2 w-xl h-20 px-10 py-5 rounded-xl mb-6 animate-float-subtle bg-[url('/images/banner.png')] bg-contain bg-no-repeat">
+                <span className="font-pirate text-xl sm:text-lg font-bold text-[#2b1b17] uppercase tracking-widest">
+                  CALLING ALL INNOVATORS!
+                </span>
+              </div>
+
+              {/* MAIN HEADLINE WITH PIRATE FONT */}
+              <div className="space-y-1">
+                <h1 className="font-pirate text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.02] text-[#1e120d] drop-shadow-sm">
+                  SET SAIL.
+                </h1>
+                <h1 className="font-pirate text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.02] text-[#1e120d] drop-shadow-sm">
+                  BUILD THE FUTURE.
+                </h1>
+                <h1 className="font-pirate text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.02] text-[#8b1e1b] drop-shadow-sm">
+                  CONQUER LIMITS.
+                </h1>
+              </div>
+
+              {/* ANCHOR DIVIDER LINE */}
+              <div className="flex items-center gap-3 my-5 max-w-md">
+                <div className="h-px flex-1 bg-linear-to-r from-[#8b1e1b]/40 to-transparent" />
+                <span className="text-[#8b1e1b] text-lg font-pirate">⚓</span>
+                <div className="h-px flex-1 bg-linear-to-l from-[#8b1e1b]/40 to-transparent" />
+              </div>
+
+              {/* TAGLINE */}
+              <p className="text-[#3d271d] font-sans font-medium text-base sm:text-lg max-w-lg leading-relaxed">
+                Join{" "}
+                <strong className="text-[#1e120d] font-semibold">
+                  Hackpreneur
+                </strong>{" "}
+                – the ultimate hackathon where creativity meets code and ideas
+                become impact.
+              </p>
+
+              {/* ACTION BUTTONS */}
+              <div className="mt-7 flex flex-wrap items-center gap-4">
+                <button
+                  onClick={() => setIsRegisterOpen(true)}
+                  className="px-8 py-3.5 rounded-xl font-pirate text-xl text-white font-bold btn-crimson flex items-center gap-3 tracking-wider shadow-lg hover:scale-105 active:scale-95 transition-all"
+                >
+                  <span className="text-4xl">🏴‍☠️</span>
+                  <span>REGISTER NOW</span>
+                </button>
+              </div>
+
+              {/* WOOD PLANK COUNTDOWN TIMER BOX */}
+              <div className="mt-6">
+                <CountdownTimer />
+              </div>
+            </div>
+          </div>
+
+          {/* BOTTOM PARCHMENT FEATURE RIBBON */}
+          {/*<ParchmentRibbon />*/}
+        </section>
+
+        {/*<BlurSeparator />*/}
+
+        {/* ========================================== */}
+        {/* ABOUT SECTION                              */}
+        {/* ========================================== */}
+        <AboutSection onOpenRegister={() => setIsRegisterOpen(true)} />
+
+        {/*<BlurSeparator />*/}
+
+        {/* ========================================== */}
+        {/* ACHIEVEMENTS SECTION                       */}
+        {/* ========================================== */}
+        <AchievementsSection />
+
+        {/*<BlurSeparator />*/}
+
+        {/* ========================================== */}
+        {/* PAST EVENTS SECTION                        */}
+        {/* ========================================== */}
+        <PastEventsSection />
+
+        {/*<BlurSeparator />*/}
+
+        {/* ========================================== */}
+        {/* SCHEDULE SECTION                           */}
+        {/* ========================================== */}
+        <ScheduleSection />
+
+        {/*<BlurSeparator />*/}
+
+        {/* ========================================== */}
+        {/* FAQ SECTION                                */}
+        {/* ========================================== */}
+        <section
+          id="faq"
+          className="relative isolate w-full min-h-screen flex flex-col justify-center overflow-hidden py-16 sm:py-24 scroll-mt-20"
+        >
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-20 brightness-[1.02] contrast-[1.02]"
+            style={{ backgroundImage: "url('/about_bg.svg')" }}
+          >
+            <div className="absolute inset-0 bg-linear-to-r from-[#faf4e5]/90 via-[#faf4e5]/80 via-50% to-[#faf4e5]/70 -z-10" />
+            <div className="absolute inset-0 bg-linear-to-b from-[#faf4e5] via-transparent to-[#faf4e5] -z-10" />
+          </div>
+          <FaqSection />
+        </section>
+      </main>
+
+      {/* FOOTER SECTION */}
+      <FooterSection onOpenRegister={() => setIsRegisterOpen(true)} />
+
+      {/* REGISTRATION MODAL */}
+      <RegistrationModal
+        isOpen={isRegisterOpen}
+        onClose={() => setIsRegisterOpen(false)}
+        selectedTrack={selectedTrack}
+      />
+    </div>
+  );
+}
