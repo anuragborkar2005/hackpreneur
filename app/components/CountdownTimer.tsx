@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 
 export default function CountdownTimer() {
   const targetDate = new Date("2026-08-06T09:00:00Z").getTime();
+  const [mounted, setMounted] = useState(false);
 
   const calculateTimeLeft = () => {
     const now = new Date().getTime();
@@ -20,9 +21,15 @@ export default function CountdownTimer() {
     return { days: 0, hours: 0, minutes: 0, seconds: 0 };
   };
 
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
 
   useEffect(() => {
+    setMounted(true);
     setTimeLeft(calculateTimeLeft());
     const interval = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
@@ -32,10 +39,10 @@ export default function CountdownTimer() {
   }, [targetDate]);
 
   const units = [
-    { label: "DAYS", value: timeLeft.days },
-    { label: "HOURS", value: timeLeft.hours },
-    { label: "MINUTES", value: timeLeft.minutes },
-    { label: "SECONDS", value: timeLeft.seconds },
+    { label: "DAYS", value: mounted ? timeLeft.days : 13 },
+    { label: "HOURS", value: mounted ? timeLeft.hours : 15 },
+    { label: "MINUTES", value: mounted ? timeLeft.minutes : 42 },
+    { label: "SECONDS", value: mounted ? timeLeft.seconds : 40 },
   ];
 
   return (

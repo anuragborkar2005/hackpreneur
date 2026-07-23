@@ -1,16 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  Search,
-  Compass,
-  Map,
-  Swords,
-  Ship,
-  Trophy,
-  Anchor,
-  Calendar,
-} from "lucide-react";
+import Image from "next/image";
 
 interface TimelineStep {
   id: string;
@@ -19,7 +10,7 @@ interface TimelineStep {
   description: string;
   date: string;
   time?: string;
-  icon: React.ReactNode;
+  image: string;
   color: string;
   titleColor: string;
   offsetY: string;
@@ -35,7 +26,7 @@ export default function ScheduleSection() {
       title: "REGISTRATIONS OPEN",
       description: "Drop anchor and register your crew.",
       date: "20 MAY 2025",
-      icon: <Search className="w-7 h-7 text-white" />,
+      image: "/images/timeline_step1.jpg",
       color: "bg-[#8b1e1b]",
       titleColor: "text-[#8b1e1b]",
       offsetY: "lg:translate-y-6",
@@ -46,7 +37,7 @@ export default function ScheduleSection() {
       title: "REGISTRATIONS CLOSE",
       description: "Last call to join the adventure.",
       date: "10 JUNE 2025",
-      icon: <Compass className="w-7 h-7 text-white" />,
+      image: "/images/timeline_step2.jpg",
       color: "bg-[#1b2a4a]",
       titleColor: "text-[#1b2a4a]",
       offsetY: "lg:-translate-y-3",
@@ -57,7 +48,7 @@ export default function ScheduleSection() {
       title: "PROBLEM STATEMENT RELEASE",
       description: "Discover the challenges. Plan your strategy.",
       date: "12 JUNE 2025",
-      icon: <Map className="w-7 h-7 text-white" />,
+      image: "/images/timeline_step3.jpg",
       color: "bg-[#5c3e1e]",
       titleColor: "text-[#5c3e1e]",
       offsetY: "lg:translate-y-4",
@@ -69,7 +60,7 @@ export default function ScheduleSection() {
       description: "The voyage begins! Build. Code. Innovate.",
       date: "20 JUNE 2025",
       time: "09:00 AM (IST)",
-      icon: <Swords className="w-7 h-7 text-white" />,
+      image: "/images/timeline_step4.jpg",
       color: "bg-[#1c4d29]",
       titleColor: "text-[#1c4d29]",
       offsetY: "lg:-translate-y-4",
@@ -81,7 +72,7 @@ export default function ScheduleSection() {
       description: "Time to wrap up and submit your treasure.",
       date: "22 JUNE 2025",
       time: "09:00 AM (IST)",
-      icon: <Ship className="w-7 h-7 text-white" />,
+      image: "/images/timeline_step5.jpg",
       color: "bg-[#4a1b42]",
       titleColor: "text-[#4a1b42]",
       offsetY: "lg:translate-y-3",
@@ -92,7 +83,7 @@ export default function ScheduleSection() {
       title: "RESULTS & AWARDS",
       description: "Heroes will be announced. Glory is yours!",
       date: "25 JUNE 2025",
-      icon: <Trophy className="w-7 h-7 text-white" />,
+      image: "/images/timeline_step6.jpg",
       color: "bg-[#7a5214]",
       titleColor: "text-[#7a5214]",
       offsetY: "lg:translate-y-0",
@@ -178,13 +169,19 @@ export default function ScheduleSection() {
                     </div>
                   </div>
 
-                  {/* CIRCULAR ICON BADGE */}
+                  {/* CIRCULAR IMAGE BADGE */}
                   <div
-                    className={`w-20 h-20 sm:w-22 sm:h-22 rounded-full ${step.color} border-4 border-[#d4af37] shadow-xl flex items-center justify-center text-3xl sm:text-4xl text-white group-hover:rotate-6 transition-all duration-300 relative`}
+                    className="w-20 h-20 sm:w-22 sm:h-22 rounded-full border-4 border-[#d4af37] shadow-xl relative overflow-hidden group-hover:rotate-6 group-hover:scale-105 transition-all duration-300 bg-[#3a2012]"
                   >
-                    <span>{step.icon}</span>
-                    {/* Ring highlight */}
-                    <div className="absolute inset-0 rounded-full border border-white/30" />
+                    <Image
+                      src={step.image}
+                      alt={step.title}
+                      fill
+                      sizes="88px"
+                      className="object-cover rounded-full"
+                    />
+                    {/* Golden Ring Highlight Overlay */}
+                    <div className="absolute inset-0 rounded-full border border-amber-300/40 pointer-events-none" />
                   </div>
 
                   {/* TITLE */}

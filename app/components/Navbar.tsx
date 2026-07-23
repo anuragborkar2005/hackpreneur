@@ -101,9 +101,6 @@ export default function Navbar({
             ) : (
               <Play size={14} className="text-amber-400 fill-amber-400" />
             )}
-            <span className="font-mono text-[11px] tracking-wider uppercase font-bold text-amber-200">
-              {soundEnabled ? "PAUSE AUDIO" : "PLAY AUDIO"}
-            </span>
           </button>
 
           <a
