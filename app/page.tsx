@@ -13,6 +13,7 @@ import SponsorsSection from "./components/SponsorsSection";
 import FooterSection from "./components/FooterSection";
 import RegistrationModal from "./components/RegistrationModal";
 import AmbientAudio from "./components/AmbientAudio";
+import TechFestEventsSection from "./components/TechFestEventsSection";
 import Image from "next/image";
 
 export default function Home() {
@@ -114,6 +115,14 @@ export default function Home() {
                   <span className="text-4xl">🏴‍☠️</span>
                   <span>REGISTER NOW</span>
                 </a>
+
+                <a
+                  href="#events"
+                  className="px-6 py-3.5 rounded-xl font-pirate text-lg text-[#1e120d] font-bold bg-[#e6d8b8] hover:bg-[#f3e5ab] border border-[#c8a355] shadow-md hover:scale-105 active:scale-95 transition-all cursor-pointer flex items-center gap-2"
+                >
+                  <span>EXPLORE ALL EVENTS</span>
+                  <span>⚡</span>
+                </a>
               </div>
 
               {/* WOOD PLANK COUNTDOWN TIMER BOX */}
@@ -126,6 +135,11 @@ export default function Home() {
           {/* BOTTOM PARCHMENT FEATURE RIBBON */}
           {/*<ParchmentRibbon />*/}
         </section>
+
+        {/* ========================================== */}
+        {/* TECHFEST EVENTS ARENA SECTION               */}
+        {/* ========================================== */}
+        <TechFestEventsSection />
 
         {/*<BlurSeparator />*/}
 
