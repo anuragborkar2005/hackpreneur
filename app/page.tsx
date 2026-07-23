@@ -3,27 +3,31 @@
 import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import CountdownTimer from "./components/CountdownTimer";
-import ParchmentRibbon from "./components/ParchmentRibbon";
-import BountyTracks from "./components/BountyTracks";
 import ScheduleSection from "./components/ScheduleSection";
 import FaqSection from "./components/FaqSection";
 import AboutSection from "./components/AboutSection";
 import AchievementsSection from "./components/AchievementsSection";
 import PastEventsSection from "./components/PastEventsSection";
-import BlurSeparator from "./components/BlurSeparator";
+import OrganizersSection from "./components/OrganizersSection";
+import SponsorsSection from "./components/SponsorsSection";
 import FooterSection from "./components/FooterSection";
 import RegistrationModal from "./components/RegistrationModal";
 import AmbientAudio from "./components/AmbientAudio";
+import Image from "next/image";
 
 export default function Home() {
   const [isRegisterOpen, setIsRegisterOpen] = useState(false);
   const [selectedTrack, setSelectedTrack] = useState<string>("ai-captains");
-  const [soundEnabled, setSoundEnabled] = useState(false);
+  const [soundEnabled, setSoundEnabled] = useState(true);
   const [activeSection, setActiveSection] = useState("home");
+
+  const handleOpenRegister = () => {
+    window.open("https://forms.gle/GSExBRPYAzxPeDxq6", "_blank", "noopener,noreferrer");
+  };
 
   const handleOpenTrackModal = (track: any) => {
     setSelectedTrack(track.id);
-    setIsRegisterOpen(true);
+    handleOpenRegister();
   };
 
   return (
@@ -33,7 +37,7 @@ export default function Home() {
 
       {/* TOP NAVIGATION BAR */}
       <Navbar
-        onOpenRegister={() => setIsRegisterOpen(true)}
+        onOpenRegister={handleOpenRegister}
         soundEnabled={soundEnabled}
         onToggleSound={() => setSoundEnabled(!soundEnabled)}
         activeSection={activeSection}
@@ -58,10 +62,14 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12 w-full flex-1 flex flex-col justify-center">
             <div className="max-w-2xl">
               {/* TOP SCROLL BADGE */}
-              <div className="inline-flex items-center gap-2 w-xl h-20 px-10 py-5 rounded-xl mb-6 animate-float-subtle bg-[url('/images/banner.png')] bg-contain bg-no-repeat">
-                <span className="font-pirate text-xl sm:text-lg font-bold text-[#2b1b17] uppercase tracking-widest">
-                  CALLING ALL INNOVATORS!
-                </span>
+              <div className="relative mb-6 animate-float-subtle inline-block h-14 sm:h-16 md:h-20 w-64 sm:w-80">
+                <Image
+                  src="/images/banner.png"
+                  alt="Calling All Innovators!"
+                  fill
+                  sizes="(max-width: 768px) 256px, 320px"
+                  className="object-contain filter drop-shadow-md select-none"
+                />
               </div>
 
               {/* MAIN HEADLINE WITH PIRATE FONT */}
@@ -96,13 +104,16 @@ export default function Home() {
 
               {/* ACTION BUTTONS */}
               <div className="mt-7 flex flex-wrap items-center gap-4">
-                <button
-                  onClick={() => setIsRegisterOpen(true)}
-                  className="px-8 py-3.5 rounded-xl font-pirate text-xl text-white font-bold btn-crimson flex items-center gap-3 tracking-wider shadow-lg hover:scale-105 active:scale-95 transition-all"
+                <a
+                  href="https://forms.gle/GSExBRPYAzxPeDxq6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={handleOpenRegister}
+                  className="px-8 py-3.5 rounded-xl font-pirate text-xl text-white font-bold btn-crimson flex items-center gap-3 tracking-wider shadow-lg hover:scale-105 active:scale-95 transition-all cursor-pointer"
                 >
                   <span className="text-4xl">🏴‍☠️</span>
                   <span>REGISTER NOW</span>
-                </button>
+                </a>
               </div>
 
               {/* WOOD PLANK COUNTDOWN TIMER BOX */}
@@ -121,7 +132,7 @@ export default function Home() {
         {/* ========================================== */}
         {/* ABOUT SECTION                              */}
         {/* ========================================== */}
-        <AboutSection onOpenRegister={() => setIsRegisterOpen(true)} />
+        <AboutSection onOpenRegister={handleOpenRegister} />
 
         {/*<BlurSeparator />*/}
 
@@ -144,6 +155,16 @@ export default function Home() {
         {/* ========================================== */}
         <ScheduleSection />
 
+        {/* ========================================== */}
+        {/* SPONSORS SECTION                           */}
+        {/* ========================================== */}
+        <SponsorsSection />
+
+        {/* ========================================== */}
+        {/* ORGANIZERS SECTION                         */}
+        {/* ========================================== */}
+        <OrganizersSection />
+
         {/*<BlurSeparator />*/}
 
         {/* ========================================== */}
@@ -165,7 +186,7 @@ export default function Home() {
       </main>
 
       {/* FOOTER SECTION */}
-      <FooterSection onOpenRegister={() => setIsRegisterOpen(true)} />
+      <FooterSection onOpenRegister={handleOpenRegister} />
 
       {/* REGISTRATION MODAL */}
       <RegistrationModal

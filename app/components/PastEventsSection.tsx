@@ -208,9 +208,10 @@ export default function PastEventsSection() {
               {/* Photo Frame */}
               <div className="w-full h-36 rounded-xl overflow-hidden border border-[#c8a355]/40 mb-3 bg-[#1e120d] relative">
                 <Image
-                src={card.image}
-                alt={card.title}
-                fill
+                  src={card.image}
+                  alt={card.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 300px"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent opacity-60" />
@@ -273,6 +274,7 @@ export default function PastEventsSection() {
                     src={imgUrl}
                     alt={`Filmstrip frame ${idx + 1}`}
                     fill
+                    sizes="120px"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-black/30 group-hover:bg-transparent transition-colors flex items-center justify-center">

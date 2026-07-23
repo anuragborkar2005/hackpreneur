@@ -116,3 +116,12 @@
   color: #a81c19;
   text-shadow: 0 0 8px rgba(168, 28, 25, 0.4);
 }
+
+/* Custom Pirate Cursors (Small 24x24) */
+html, body {
+  cursor: url('/images/cursor_small.png') 0 0, url('/images/cursor.cur') 0 0, default;
+}
+
+a, button, [role="button"], input, select, label, textarea, .cursor-pointer {
+  cursor: url('/images/pointer_small.png') 4 0, url('/images/pointer.cur') 4 0, pointer !important;
+}

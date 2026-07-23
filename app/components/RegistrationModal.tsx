@@ -24,6 +24,7 @@ export default function RegistrationModal({ isOpen, onClose, selectedTrack }: Re
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    window.open("https://forms.gle/GSExBRPYAzxPeDxq6", "_blank", "noopener,noreferrer");
     const passportId = "PIRATE-" + Math.floor(100000 + Math.random() * 900000);
     setSubmittedPassport({
       ...formData,

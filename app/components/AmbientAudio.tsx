@@ -3,80 +3,56 @@
 import { useEffect, useRef } from "react";
 
 export default function AmbientAudio({ enabled }: { enabled: boolean }) {
-  const audioCtxRef = useRef<AudioContext | null>(null);
-  const isPlayingRef = useRef(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    if (!enabled) {
-      if (audioCtxRef.current && isPlayingRef.current) {
-        audioCtxRef.current.suspend();
-        isPlayingRef.current = false;
-      }
-      return;
+    if (!audioRef.current) {
+      const audio = new Audio("/audio/background.mp3");
+      audio.loop = true;
+      audio.volume = 0.4;
+      audioRef.current = audio;
     }
 
-    try {
-      if (!audioCtxRef.current) {
-        const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
-        if (!AudioContextClass) return;
-        audioCtxRef.current = new AudioContextClass();
+    const audio = audioRef.current;
+
+    const startPlayback = () => {
+      if (audio && enabled && audio.paused) {
+        audio.play().catch(() => {});
       }
+    };
 
-      const ctx = audioCtxRef.current;
-      if (ctx.state === "suspended") {
-        ctx.resume();
-      }
-      isPlayingRef.current = true;
+    if (enabled) {
+      // 1. Try immediate playback
+      startPlayback();
 
-      // Create subtle ocean wave synth (pink noise + LFO filter)
-      const bufferSize = ctx.sampleRate * 2;
-      const noiseBuffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
-      const output = noiseBuffer.getChannelData(0);
-      let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0;
+      // 2. Attach listeners for any early user gesture (scroll, pointer, keydown, touch)
+      const events = ["pointerdown", "pointermove", "scroll", "click", "keydown", "touchstart"];
+      const handleUserGesture = () => {
+        startPlayback();
+        events.forEach((evt) => window.removeEventListener(evt, handleUserGesture));
+      };
 
-      for (let i = 0; i < bufferSize; i++) {
-        const white = Math.random() * 2 - 1;
-        b0 = 0.99886 * b0 + white * 0.0555179;
-        b1 = 0.99332 * b1 + white * 0.0750759;
-        b2 = 0.96900 * b2 + white * 0.1538520;
-        b3 = 0.86650 * b3 + white * 0.3104856;
-        b4 = 0.55000 * b4 + white * 0.5329522;
-        b5 = -0.7616 * b5 - white * 0.0168980;
-        output[i] = b0 + b1 + b2 + b3 + b4 + b5 + b6 + white * 0.5362;
-        output[i] *= 0.015; // Very low ambient volume
-        b6 = white * 0.115926;
-      }
+      events.forEach((evt) => window.addEventListener(evt, handleUserGesture, { passive: true }));
 
-      const whiteNoise = ctx.createBufferSource();
-      whiteNoise.buffer = noiseBuffer;
-      whiteNoise.loop = true;
-
-      const filter = ctx.createBiquadFilter();
-      filter.type = "lowpass";
-      filter.frequency.setValueAtTime(250, ctx.currentTime);
-
-      // LFO for wave swelling
-      const lfo = ctx.createOscillator();
-      lfo.frequency.setValueAtTime(0.1, ctx.currentTime); // 10s wave cycle
-      const lfoGain = ctx.createGain();
-      lfoGain.gain.setValueAtTime(150, ctx.currentTime);
-
-      lfo.connect(lfoGain);
-      lfoGain.connect(filter.frequency);
-
-      const mainGain = ctx.createGain();
-      mainGain.gain.setValueAtTime(0.08, ctx.currentTime);
-
-      whiteNoise.connect(filter);
-      filter.connect(mainGain);
-      mainGain.connect(ctx.destination);
-
-      whiteNoise.start();
-      lfo.start();
-    } catch (e) {
-      console.warn("Web Audio ambient initialization skipped:", e);
+      return () => {
+        events.forEach((evt) => window.removeEventListener(evt, handleUserGesture));
+      };
+    } else {
+      audio.pause();
     }
   }, [enabled]);
 
-  return null;
+  return (
+    <audio
+      ref={(el) => {
+        if (el && !audioRef.current) {
+          audioRef.current = el;
+        }
+      }}
+      src="/audio/background.mp3"
+      loop
+      autoPlay
+      style={{ display: "none" }}
+    />
+  );
 }
