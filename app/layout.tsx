@@ -40,7 +40,7 @@ const new_rocker = New_Rocker({
 
 
 export const metadata: Metadata = {
-  title: "ABOUT HACKPRENEUR | Build • Innovate • Conquer",
+  title: "HACKPRENEUR | Build • Innovate • Conquer",
   description: "Hackpreneur is a platform for dreamers, builders, and problem solvers to come together, collaborate, and create impactful solutions.",
 };
 
