@@ -52,8 +52,8 @@ export const TECHFEST_EVENTS: TechEvent[] = [
     ],
     googleFormUrl: "https://forms.gle/GSExBRPYAzxPeDxq6",
     coordinators: [
-      { name: "Ojas Satvede", phone: "Event Lead", role: "Organizer" },
-      { name: "Tejasvi Jadhao", phone: "Event Lead", role: "Organizer" }
+      { name: "Ojas Satdeve", phone: "Event Lead", role: "Organizer" },
+      { name: "Tejasvini Jadhao", phone: "Event Lead", role: "Organizer" }
     ],
     featured: true,
     badge: "FLAGSHIP HACKATHON"

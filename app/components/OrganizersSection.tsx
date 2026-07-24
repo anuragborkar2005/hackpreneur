@@ -10,11 +10,9 @@ import {
   Shield,
   Code,
   Award,
-  BookOpen,
 } from "lucide-react";
 import {
   PirateScrollReveal,
-  PirateInteractiveCard,
   PirateSpinWheel,
   PirateShipFloat,
 } from "./PirateMotion";
@@ -61,95 +59,37 @@ export default function OrganizersSection() {
           </p>
         </PirateScrollReveal>
 
-        {/* TOP GRID: PARCHMENT CARDS FOR CREW GROUPS */}
+        {/* CREW GRID: PARCHMENT CARDS FOR LEADERSHIP & ORGANIZERS */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 items-stretch">
-          
-          {/* 1. FACULTY COORDINATORS (Col 3 on lg) */}
-          <div className="lg:col-span-3 bg-[#f6ebd4] border-2 border-[#b89562] rounded-2xl p-5 shadow-xl relative flex flex-col justify-between overflow-hidden">
+
+          {/* 1. PRESIDENT CSI (Col 12 on lg) */}
+          <div className="lg:col-span-12 bg-[#f6ebd4] border-2 border-[#b89562] rounded-2xl p-6 shadow-xl relative flex flex-col justify-between overflow-hidden max-w-2xl mx-auto w-full">
             {/* Header Banner */}
-            <div className="w-full bg-[#3a2012] text-[#fce8c3] py-2 px-3 rounded-lg text-center font-pirate text-lg tracking-wider font-bold mb-6 flex items-center justify-center gap-2 border border-[#8c5a2b]">
-              <span>☸</span>
-              <span>FACULTY COORDINATORS</span>
-            </div>
-
-            {/* Members */}
-            <div className="grid grid-cols-2 gap-3 mb-4">
-              {/* Dr. Rohit Sharma */}
-              <div className="flex flex-col items-center text-center">
-                <div className="relative w-20 h-20 sm:w-22 sm:h-22 rounded-full p-1 bg-gradient-to-b from-[#d4af37] via-[#8c5a2b] to-[#3a2012] shadow-md mb-2">
-                  <div className="w-full h-full rounded-full overflow-hidden relative border-2 border-[#f6ebd4]">
-                    <Image
-                      src="/images/organizer_rohit.jpg"
-                      alt="Dr. Rohit Sharma"
-                      fill
-                      sizes="88px"
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-                <h4 className="font-serif font-bold text-sm sm:text-base text-[#2b1810] leading-tight">
-                  Dr. Rohit Sharma
-                </h4>
-                <p className="text-[11px] text-[#6b4728] font-sans font-medium mt-0.5 leading-snug">
-                  Professor, IT Department
-                </p>
-              </div>
-
-              {/* Prof. Neha Verma */}
-              <div className="flex flex-col items-center text-center">
-                <div className="relative w-20 h-20 sm:w-22 sm:h-22 rounded-full p-1 bg-gradient-to-b from-[#d4af37] via-[#8c5a2b] to-[#3a2012] shadow-md mb-2">
-                  <div className="w-full h-full rounded-full overflow-hidden relative border-2 border-[#f6ebd4]">
-                    <Image
-                      src="/images/organizer_neha.jpg"
-                      alt="Prof. Neha Verma"
-                      fill
-                      sizes="88px"
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-                <h4 className="font-serif font-bold text-sm sm:text-base text-[#2b1810] leading-tight">
-                  Prof. Neha Verma
-                </h4>
-                <p className="text-[11px] text-[#6b4728] font-sans font-medium mt-0.5 leading-snug">
-                  Associate Professor, IT Department
-                </p>
-              </div>
-            </div>
-
-            {/* Accent Divider */}
-            <div className="flex justify-center text-[#8c1d1a] text-xs pt-2">
-              <span>★</span>
-            </div>
-          </div>
-
-          {/* 2. CONVENOR (Col 2 on lg) */}
-          <div className="lg:col-span-2 bg-[#f6ebd4] border-2 border-[#b89562] rounded-2xl p-5 shadow-xl relative flex flex-col justify-between overflow-hidden">
-            {/* Header Banner */}
-            <div className="w-full bg-[#3a2012] text-[#fce8c3] py-2 px-3 rounded-lg text-center font-pirate text-lg tracking-wider font-bold mb-6 flex items-center justify-center gap-2 border border-[#8c5a2b]">
-              <span>⚔</span>
-              <span>CONVENOR</span>
+            <div className="w-full bg-[#3a2012] text-[#fce8c3] py-2 px-3 rounded-lg text-center font-pirate text-xl tracking-wider font-bold mb-6 flex items-center justify-center gap-2 border border-[#8c5a2b]">
+              <span>👑</span>
+              <span>PRESIDENT CSI</span>
+              <span>👑</span>
             </div>
 
             {/* Member */}
             <div className="flex flex-col items-center text-center mb-4">
-              <div className="relative w-20 h-20 sm:w-22 sm:h-22 rounded-full p-1 bg-gradient-to-b from-[#d4af37] via-[#8c5a2b] to-[#3a2012] shadow-md mb-2">
+              <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full p-1 bg-gradient-to-b from-[#d4af37] via-[#8c5a2b] to-[#3a2012] shadow-lg mb-3">
                 <div className="w-full h-full rounded-full overflow-hidden relative border-2 border-[#f6ebd4]">
                   <Image
-                    src="/images/organizer_sandeep.jpg"
-                    alt="Dr. Sandeep Patil"
+                    src="/organisers/Advait_Kadoo.jpg"
+                    alt="Advait Kadoo"
                     fill
-                    sizes="88px"
-                    className="object-cover"
+                    sizes="128px"
+                    className="object-cover object-top"
                   />
                 </div>
               </div>
-              <h4 className="font-serif font-bold text-sm sm:text-base text-[#2b1810] leading-tight">
-                Dr. Sandeep Patil
+              <h4 className="font-serif font-bold text-xl text-[#2b1810] leading-tight">
+                Advait Kadoo
               </h4>
-              <p className="text-[11px] text-[#6b4728] font-sans font-medium mt-0.5 leading-snug">
-                Head, IT Department
-              </p>
+              <span className="inline-block mt-2 px-4 py-1 bg-[#8c1d1a] text-[#fce8c3] text-sm font-pirate tracking-wider rounded-full shadow-sm">
+                President • Computer Society of India
+              </span>
             </div>
 
             {/* Accent Divider */}
@@ -158,76 +98,55 @@ export default function OrganizersSection() {
             </div>
           </div>
 
-          {/* 3. STUDENT LEADS (Col 4 on lg) */}
-          <div className="lg:col-span-4 bg-[#f6ebd4] border-2 border-[#b89562] rounded-2xl p-5 shadow-xl relative flex flex-col justify-between overflow-hidden">
+          {/* 2. ORGANISERS (Col 6 on lg) */}
+          <div className="lg:col-span-6 bg-[#f6ebd4] border-2 border-[#b89562] rounded-2xl p-5 shadow-xl relative flex flex-col justify-between overflow-hidden">
             {/* Header Banner */}
             <div className="w-full bg-[#3a2012] text-[#fce8c3] py-2 px-3 rounded-lg text-center font-pirate text-lg tracking-wider font-bold mb-6 flex items-center justify-center gap-2 border border-[#8c5a2b]">
-              <span>✖</span>
-              <span>STUDENT LEADS</span>
+              <span>⚔</span>
+              <span>ORGANISERS</span>
             </div>
 
             {/* Members */}
-            <div className="grid grid-cols-3 gap-2 mb-4">
-              {/* Aryan Joshi */}
+            <div className="grid grid-cols-2 gap-4 mb-4">
+              {/* Ojas Satdeve */}
               <div className="flex flex-col items-center text-center">
-                <div className="relative w-18 h-18 sm:w-20 sm:h-20 rounded-full p-1 bg-gradient-to-b from-[#d4af37] via-[#8c5a2b] to-[#3a2012] shadow-md mb-2">
+                <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full p-1 bg-linear-to-b from-[#d4af37] via-[#8c5a2b] to-[#3a2012] shadow-md mb-2">
                   <div className="w-full h-full rounded-full overflow-hidden relative border-2 border-[#f6ebd4]">
                     <Image
-                      src="/images/organizer_aryan.jpg"
-                      alt="Aryan Joshi"
+                      src="/organisers/Ojas_Satdeve.jpeg"
+                      alt="Ojas Satdeve"
                       fill
-                      sizes="80px"
+                      sizes="96px"
                       className="object-cover"
                     />
                   </div>
                 </div>
-                <h4 className="font-serif font-bold text-xs sm:text-sm text-[#2b1810] leading-tight">
-                  Aryan Joshi
+                <h4 className="font-serif font-bold text-base text-[#2b1810] leading-tight">
+                  Ojas Satdeve
                 </h4>
-                <p className="text-[10px] text-[#6b4728] font-sans font-medium mt-0.5 leading-snug">
-                  Overall Lead
+                <p className="text-xs text-[#8c1d1a] font-sans font-semibold mt-0.5">
+                  Organiser & Event Lead
                 </p>
               </div>
 
-              {/* Riya Gupta */}
+              {/* Tejasvini Jadhao */}
               <div className="flex flex-col items-center text-center">
-                <div className="relative w-18 h-18 sm:w-20 sm:h-20 rounded-full p-1 bg-gradient-to-b from-[#d4af37] via-[#8c5a2b] to-[#3a2012] shadow-md mb-2">
+                <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full p-1 bg-gradient-to-b from-[#d4af37] via-[#8c5a2b] to-[#3a2012] shadow-md mb-2">
                   <div className="w-full h-full rounded-full overflow-hidden relative border-2 border-[#f6ebd4]">
                     <Image
-                      src="/images/organizer_riya.jpg"
-                      alt="Riya Gupta"
+                      src="/organisers/Tejasvi.jpg"
+                      alt="Tejasvini Jadhao"
                       fill
-                      sizes="80px"
+                      sizes="96px"
                       className="object-cover"
                     />
                   </div>
                 </div>
-                <h4 className="font-serif font-bold text-xs sm:text-sm text-[#2b1810] leading-tight">
-                  Riya Gupta
+                <h4 className="font-serif font-bold text-base text-[#2b1810] leading-tight">
+                  Tejasvi Jadhao
                 </h4>
-                <p className="text-[10px] text-[#6b4728] font-sans font-medium mt-0.5 leading-snug">
-                  Operations Lead
-                </p>
-              </div>
-
-              {/* Karan Singh */}
-              <div className="flex flex-col items-center text-center">
-                <div className="relative w-18 h-18 sm:w-20 sm:h-20 rounded-full p-1 bg-gradient-to-b from-[#d4af37] via-[#8c5a2b] to-[#3a2012] shadow-md mb-2">
-                  <div className="w-full h-full rounded-full overflow-hidden relative border-2 border-[#f6ebd4]">
-                    <Image
-                      src="/images/organizer_karan.jpg"
-                      alt="Karan Singh"
-                      fill
-                      sizes="80px"
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-                <h4 className="font-serif font-bold text-xs sm:text-sm text-[#2b1810] leading-tight">
-                  Karan Singh
-                </h4>
-                <p className="text-[10px] text-[#6b4728] font-sans font-medium mt-0.5 leading-snug">
-                  Design & PR Lead
+                <p className="text-xs text-[#8c1d1a] font-sans font-semibold mt-0.5">
+                  Organiser & Event Lead
                 </p>
               </div>
             </div>
@@ -238,55 +157,55 @@ export default function OrganizersSection() {
             </div>
           </div>
 
-          {/* 4. TECHNICAL LEADS (Col 3 on lg) */}
-          <div className="lg:col-span-3 bg-[#f6ebd4] border-2 border-[#b89562] rounded-2xl p-5 shadow-xl relative flex flex-col justify-between overflow-hidden">
+          {/* 4. TECHNICAL HEADS (Col 6 on lg) */}
+          <div className="lg:col-span-6 bg-[#f6ebd4] border-2 border-[#b89562] rounded-2xl p-5 shadow-xl relative flex flex-col justify-between overflow-hidden">
             {/* Header Banner */}
             <div className="w-full bg-[#3a2012] text-[#fce8c3] py-2 px-3 rounded-lg text-center font-pirate text-lg tracking-wider font-bold mb-6 flex items-center justify-center gap-2 border border-[#8c5a2b]">
               <span>&lt;/&gt;</span>
-              <span>TECHNICAL LEADS</span>
+              <span>TECHNICAL HEADS</span>
             </div>
 
             {/* Members */}
-            <div className="grid grid-cols-2 gap-3 mb-4">
-              {/* Vedant Kulkarni */}
+            <div className="grid grid-cols-2 gap-4 mb-4">
+              {/* Anurag Borkar */}
               <div className="flex flex-col items-center text-center">
-                <div className="relative w-20 h-20 sm:w-22 sm:h-22 rounded-full p-1 bg-gradient-to-b from-[#d4af37] via-[#8c5a2b] to-[#3a2012] shadow-md mb-2">
+                <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full p-1 bg-gradient-to-b from-[#d4af37] via-[#8c5a2b] to-[#3a2012] shadow-md mb-2">
                   <div className="w-full h-full rounded-full overflow-hidden relative border-2 border-[#f6ebd4]">
                     <Image
-                      src="/images/organizer_vedant.jpg"
-                      alt="Vedant Kulkarni"
+                      src="/organisers/AnuragBorkar.jpg"
+                      alt="Anurag Borkar"
                       fill
-                      sizes="88px"
+                      sizes="96px"
                       className="object-cover"
                     />
                   </div>
                 </div>
-                <h4 className="font-serif font-bold text-sm sm:text-base text-[#2b1810] leading-tight">
-                  Vedant Kulkarni
+                <h4 className="font-serif font-bold text-base text-[#2b1810] leading-tight">
+                  Anurag Borkar
                 </h4>
-                <p className="text-[11px] text-[#6b4728] font-sans font-medium mt-0.5 leading-snug">
-                  Technical Lead
+                <p className="text-xs text-[#8c1d1a] font-sans font-semibold mt-0.5">
+                  Technical Head
                 </p>
               </div>
 
-              {/* Ananya Rao */}
+              {/* Khushal Sharma */}
               <div className="flex flex-col items-center text-center">
-                <div className="relative w-20 h-20 sm:w-22 sm:h-22 rounded-full p-1 bg-gradient-to-b from-[#d4af37] via-[#8c5a2b] to-[#3a2012] shadow-md mb-2">
+                <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full p-1 bg-gradient-to-b from-[#d4af37] via-[#8c5a2b] to-[#3a2012] shadow-md mb-2">
                   <div className="w-full h-full rounded-full overflow-hidden relative border-2 border-[#f6ebd4]">
                     <Image
-                      src="/images/organizer_ananya.jpg"
-                      alt="Ananya Rao"
+                      src="/organisers/Khushal_Sharma.jpeg"
+                      alt="Khushal Sharma"
                       fill
-                      sizes="88px"
+                      sizes="96px"
                       className="object-cover"
                     />
                   </div>
                 </div>
-                <h4 className="font-serif font-bold text-sm sm:text-base text-[#2b1810] leading-tight">
-                  Ananya Rao
+                <h4 className="font-serif font-bold text-base text-[#2b1810] leading-tight">
+                  Khushal Sharma
                 </h4>
-                <p className="text-[11px] text-[#6b4728] font-sans font-medium mt-0.5 leading-snug">
-                  Developer Relations
+                <p className="text-xs text-[#8c1d1a] font-sans font-semibold mt-0.5">
+                  Technical Head
                 </p>
               </div>
             </div>
@@ -294,6 +213,85 @@ export default function OrganizersSection() {
             {/* Accent Divider */}
             <div className="flex justify-center text-[#8c1d1a] text-sm pt-2">
               <span>⚓</span>
+            </div>
+          </div>
+
+          {/* 5. DEVELOPED BY (Col 12 - Full Width Special Parchment Card) */}
+          <div className="lg:col-span-12 bg-linear-to-b from-[#281810] via-[#1f120b] to-[#281810] border-2 border-[#d4af37]/80 rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden text-[#fce8c3]">
+            {/* Glow accent */}
+            <div className="absolute -top-24 -left-24 w-48 h-48 bg-[#d4af37]/10 rounded-full blur-3xl" />
+            <div className="absolute -bottom-24 -right-24 w-48 h-48 bg-[#8c1d1a]/20 rounded-full blur-3xl" />
+
+            {/* Header Banner */}
+            <div className="text-center mb-6 relative">
+              <div className="inline-flex items-center justify-center px-6 py-2 rounded-xl bg-[#3a2012] border border-[#d4af37]/60 text-[#ffd700] font-pirate text-2xl tracking-widest shadow-md gap-3">
+                <Code className="w-6 h-6 text-[#ffd700]" />
+                <span>DEVELOPED BY</span>
+                <Code className="w-6 h-6 text-[#ffd700]" />
+              </div>
+              <p className="text-xs text-amber-200/70 font-sans mt-2">
+                The Architects & Engineers Behind the Hackpreneur Digital Experience
+              </p>
+            </div>
+
+            {/* 3 Developers */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              {/* Anurag Borkar */}
+              <div className="flex flex-col items-center text-center p-4 rounded-xl bg-[#352015]/80 border border-[#d4af37]/30 hover:border-[#d4af37] transition-colors shadow-inner">
+                <div className="relative w-22 h-22 sm:w-24 sm:h-24 rounded-full p-1 bg-gradient-to-b from-[#ffd700] via-[#d4af37] to-[#8c5a2b] shadow-lg mb-3">
+                  <div className="w-full h-full rounded-full overflow-hidden relative border-2 border-[#281810]">
+                    <Image
+                      src="/organisers/AnuragBorkar.jpg"
+                      alt="Anurag Borkar"
+                      fill
+                      sizes="96px"
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+                <h4 className="font-serif font-bold text-lg text-[#ffd700] leading-tight">
+                  Anurag Borkar
+                </h4>
+              </div>
+
+              {/* Khushal Sharma */}
+              <div className="flex flex-col items-center text-center p-4 rounded-xl bg-[#352015]/80 border border-[#d4af37]/30 hover:border-[#d4af37] transition-colors shadow-inner">
+                <div className="relative w-22 h-22 sm:w-24 sm:h-24 rounded-full p-1 bg-gradient-to-b from-[#ffd700] via-[#d4af37] to-[#8c5a2b] shadow-lg mb-3">
+                  <div className="w-full h-full rounded-full overflow-hidden relative border-2 border-[#281810]">
+                    <Image
+                      src="/organisers/Khushal_Sharma.jpeg"
+                      alt="Khushal Sharma"
+                      fill
+                      sizes="96px"
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+                <h4 className="font-serif font-bold text-lg text-[#ffd700] leading-tight">
+                  Khushal Sharma
+                </h4>
+              </div>
+
+              {/* Dhairya Deulkar */}
+              <div className="flex flex-col items-center text-center p-4 rounded-xl bg-[#352015]/80 border border-[#d4af37]/30 hover:border-[#d4af37] transition-colors shadow-inner">
+                <div className="relative w-22 h-22 sm:w-24 sm:h-24 rounded-full p-1 bg-gradient-to-b from-[#ffd700] via-[#d4af37] to-[#8c5a2b] shadow-lg mb-3">
+                  <div className="w-full h-full rounded-full overflow-hidden relative border-2 border-[#281810]">
+                    <Image
+                      src="/organisers/Dhairya_Deulkar.jpeg"
+                      alt="Dhairya Deulkar"
+                      fill
+                      sizes="96px"
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+                <h4 className="font-serif font-bold text-lg text-[#ffd700] leading-tight">
+                  Dhairya Deulkar
+                </h4>
+                <span className="text-xs text-amber-100/90 font-mono mt-1 font-semibold">
+                  Frontend & UI Engineer
+                </span>
+              </div>
             </div>
           </div>
 
@@ -301,7 +299,7 @@ export default function OrganizersSection() {
 
         {/* BOTTOM ROW: ADVISORY BOARD & IN COLLABORATION WITH */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-          
+
           {/* ADVISORY BOARD (Dark Wood Plank Card) */}
           <div className="lg:col-span-5 bg-[#23150d] border-2 border-[#d4af37]/70 rounded-2xl p-6 shadow-2xl relative flex flex-col justify-between text-[#fce8c3] overflow-hidden">
             {/* Header Banner */}

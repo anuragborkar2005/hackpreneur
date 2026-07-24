@@ -34,39 +34,33 @@ export default function AchievementsSection() {
   const mainStats: MainStat[] = [
     {
       icon: <Users className="w-8 h-8 text-[#8c1d1a]" />,
-      number: "3500+",
+      number: "3,500+",
       label: "PARTICIPANTS",
       description: "Brilliant minds that sailed with us",
     },
     {
       icon: <Swords className="w-8 h-8 text-[#8c1d1a]" />,
-      number: "750+",
+      number: "50+",
       label: "TEAMS",
-      description: "Teams that collaborated, coded and conquered",
+      description: "Teams that collaborated & conquered",
     },
     {
       icon: <Compass className="w-8 h-8 text-[#8c1d1a]" />,
-      number: "300+",
+      number: "50+",
       label: "PROJECTS",
       description: "Innovative solutions built with purpose",
     },
     {
       icon: <Trophy className="w-8 h-8 text-[#8c1d1a]" />,
-      number: "80+",
-      label: "WINNERS",
-      description: "Champions who made their mark",
-    },
-    {
-      icon: <Handshake className="w-8 h-8 text-[#8c1d1a]" />,
-      number: "120+",
-      label: "MENTORS",
-      description: "Guiding stars who inspired the journey",
+      number: "₹40K+",
+      label: "PRIZE POOL",
+      description: "Bounties for top hacker teams",
     },
     {
       icon: <Globe className="w-8 h-8 text-[#8c1d1a]" />,
-      number: "15+",
-      label: "COUNTRIES",
-      description: "Global talent, one destination",
+      number: "12+",
+      label: "HOURS",
+      description: "Non-stop coding & innovation voyage",
     },
   ];
 
@@ -78,12 +72,6 @@ export default function AchievementsSection() {
       description: "Of organizing impactful hackathons",
     },
     {
-      icon: <Building2 className="w-5 h-5 text-amber-800" />,
-      number: "20+",
-      label: "COLLEGES",
-      description: "Partnered with top institutions",
-    },
-    {
       icon: <Video className="w-5 h-5 text-amber-800" />,
       number: "50+",
       label: "MEDIA FEATURES",
@@ -93,7 +81,13 @@ export default function AchievementsSection() {
       icon: <Heart className="w-5 h-5 text-[#8c1d1a] fill-[#8c1d1a]" />,
       number: "100%",
       label: "DEDICATION",
-      description: "To empowering innovators",
+      description: "To empowering student innovators",
+    },
+    {
+      icon: <Building2 className="w-5 h-5 text-amber-800" />,
+      number: "5+",
+      label: "PARTNERS",
+      description: "Collaborating for maximum impact",
     },
   ];
 
@@ -147,7 +141,7 @@ export default function AchievementsSection() {
         </div>
 
         {/* ROW 1: 6 MAIN PARCHMENT STAT CARDS */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-5 items-stretch">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5 items-stretch">
           {mainStats.map((stat, idx) => (
             <div
               key={idx}
@@ -160,7 +154,7 @@ export default function AchievementsSection() {
               </div>
 
               {/* Stat Number */}
-              <span className="font-pirate text-3xl sm:text-4xl font-extrabold text-[#8c1d1a] leading-none my-1 drop-shadow-xs">
+              <span className="font-inter text-3xl sm:text-4xl font-extrabold text-[#8c1d1a] leading-none my-1 drop-shadow-xs">
                 {stat.number}
               </span>
 
@@ -220,13 +214,13 @@ export default function AchievementsSection() {
                   </div>
 
                   {/* Stat Number & Label */}
-                  <div className="flex items-center gap-1 font-pirate text-xl font-bold text-[#8c1d1a] leading-none">
+                  <div className="flex items-center gap-1 font-inter text-xl font-bold text-[#8c1d1a] leading-none">
                     <span>{stat.number}</span>
-                    <span className="text-xs font-mono font-bold text-[#2b1810] uppercase">{stat.label}</span>
+                    <span className="text-xs font-inter font-bold  text-[#8c1d1a] uppercase">{stat.label}</span>
                   </div>
 
                   {/* Description */}
-                  <p className="text-[10px] font-sans font-medium text-[#4a3224] mt-1 leading-tight">
+                  <p className="text-[10px] font-inter font-medium text-[#4a3224] mt-1 leading-tight">
                     {stat.description}
                   </p>
                 </div>

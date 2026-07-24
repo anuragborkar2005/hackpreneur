@@ -197,7 +197,7 @@ export default function PastEventsSection() {
           {photoCards.map((card) => (
             <div
               key={card.id}
-              className="rounded-2xl p-5 bg-full -rotate-4 sm:p-5 flex flex-col justify-between relative group hover:-translate-y-1.5 transition-all duration-300 bg-cover bg-center bg-no-repeat"
+              className="rounded-2xl p-5 bg-full h-full -rotate-3 sm:p-5 flex flex-col justify-between relative group hover:-translate-y-1.5 transition-all duration-300 bg-cover bg-center bg-no-repeat"
               style={{ backgroundImage: "url('/card.png')" }}
             >
               {/* Thumbtack Brass Pin */}
@@ -206,14 +206,14 @@ export default function PastEventsSection() {
               </div>
 
               {/* Photo Frame */}
-              <div className="w-full h-36 rounded-xl overflow-hidden border border-[#c8a355]/40 mb-3 bg-[#1e120d] relative">
-                <Image
-                  src={card.image}
-                  alt={card.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 300px"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+              <div className="w-full h-36 p-10 rounded-xl overflow-hidden border border-[#c8a355]/40 mb-3 bg-[#1e120d] relative">
+                  <Image
+                    src={card.image}
+                    alt={card.title}
+                    fill
+                    sizes="(max-width: 480px) 50vw, (max-width: 768px) 75vw, 300px"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
                 <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent opacity-60" />
               </div>
 
@@ -234,61 +234,11 @@ export default function PastEventsSection() {
           ))}
         </div>
 
-        {/* BOTTOM ROW: VIDEO FILMSTRIP & PARCHMENT QUOTE BANNER */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
 
-          {/* Left / Center: Video Filmstrip Container (8 cols) */}
-          <div className="lg:col-span-8 p-4 rounded-2xl bg-[#1b1009] border-2 border-[#5c3a1e] shadow-2xl flex flex-col sm:flex-row items-center gap-4">
-
-            {/* Watch Action Box */}
-            <div className="p-4 rounded-xl bg-[#26170e] border border-[#d4af37]/40 text-center sm:text-left flex flex-col justify-between shrink-0 min-w-[200px]">
-              <div className="flex items-center gap-2 mb-1">
-                <div className="w-8 h-8 rounded-full bg-[#8c1d1a] text-white flex items-center justify-center text-xs font-bold shadow-md">
-                  <Play className="w-4 h-4 fill-white text-white translate-x-px" />
-                </div>
-                <span className="font-pirate text-sm font-bold text-amber-300">
-                  WATCH THE JOURNEY
-                </span>
-              </div>
-              <p className="text-[11px] font-sans text-amber-100/70 mb-3">
-                Moments that defined the adventure.
-              </p>
-              <button
-                onClick={() => setActiveMediaModal(true)}
-                className="px-4 py-2 rounded-lg font-pirate text-xs text-white font-bold btn-crimson hover:scale-105 transition-transform shadow-md flex items-center justify-center gap-1.5"
-              >
-                <span>WATCH HIGHLIGHTS</span>
-                <Play className="w-3 h-3 fill-white text-white" />
-              </button>
-            </div>
-
-            {/* Filmstrip Frame Thumbnails */}
-            <div className="flex-1 grid grid-cols-3 sm:grid-cols-5 gap-2 overflow-hidden">
-              {filmstripImages.map((imgUrl, idx) => (
-                <div
-                  key={idx}
-                  onClick={() => setActiveMediaModal(true)}
-                  className="h-20 rounded-lg overflow-hidden border border-[#c8a355]/40 relative group cursor-pointer"
-                >
-                  <Image
-                    src={imgUrl}
-                    alt={`Filmstrip frame ${idx + 1}`}
-                    fill
-                    sizes="120px"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-black/30 group-hover:bg-transparent transition-colors flex items-center justify-center">
-                    <Play className="w-5 h-5 text-white opacity-0 group-hover:opacity-100 transition-opacity fill-white" />
-                  </div>
-                </div>
-              ))}
-            </div>
-
-          </div>
 
           {/* Right: Parchment Scroll Quote Banner (4 cols) */}
           <div
-            className="lg:col-span-4 px-8 py-5 rounded-2xl overflow relative flex items-center gap-3 bg-cover bg-full  bg-center bg-no-repeat"
+            className="lg:col-span-4 w-md px-8 py-5 rounded-2xl overflow relative flex items-center gap-3 bg-cover bg-full  bg-center bg-no-repeat"
             style={{ backgroundImage: "url('/parchment_paper_landscape.png')" }}
           >
             <Quote className="w-8 h-8 text-[#8c1d1a] shrink-0 rotate-180" />
@@ -301,7 +251,6 @@ export default function PastEventsSection() {
 
         </div>
 
-      </div>
 
       {/* VIDEO HIGHLIGHTS MODAL */}
       {activeMediaModal && (

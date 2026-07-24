@@ -110,7 +110,7 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={handleOpenRegister}
-                  className="px-8 py-3.5 rounded-xl font-pirate text-xl text-white font-bold btn-crimson flex items-center gap-3 tracking-wider shadow-lg hover:scale-105 active:scale-95 transition-all cursor-pointer"
+                  className="px-6 py-3.5 rounded-xl font-pirate text-xl text-white font-bold btn-crimson flex items-center gap-3 tracking-wider shadow-lg hover:scale-105 active:scale-95 transition-all cursor-pointer"
                 >
                   <span className="text-4xl">🏴‍☠️</span>
                   <span>REGISTER NOW</span>

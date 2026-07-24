@@ -42,7 +42,7 @@ export default function AboutSection({
             <h2 className="font-pirate text-5xl sm:text-7xl font-bold tracking-tight text-[#2b1810] drop-shadow-sm leading-none">
               ABOUT
             </h2>
-            <h2 className="font-pirate text-6xl sm:text-8xl font-extrabold tracking-wide text-[#8c1d1a] drop-shadow-md leading-none">
+            <h2 className="font-pirate text-5xl sm:text-8xl font-extrabold tracking-wide text-[#8c1d1a] drop-shadow-md leading-none">
               HACKPRENEUR
             </h2>
           </div>
@@ -115,62 +115,72 @@ export default function AboutSection({
             <div className="lg:col-span-7 flex flex-col relative">
               {/* 5 Stat Cards Container */}
               <div className="flex-1 rounded-2xl p-4 sm:p-6 flex justify-center items-center">
-                <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 w-full">
-                  {/* Stat 1 */}
-                  <div className="p-3 rounded-xl bg-[#faf4e6] border border-[#c8a355]/40 text-center flex flex-col items-center justify-center gap-1 shadow-xs hover:border-[#8c1d1a] transition-all">
-                    <Users className="w-6 h-6 text-[#8c1d1a]" />
-                    <span className="font-pirate text-center text-2xl font-black text-[#8c1d1a] leading-none relative -top-px">
-                      1000+
-                    </span>
-                    <span className="text-[10px] font-mono font-bold text-[#3a2216] uppercase tracking-wider leading-none">
-                      PARTICIPANTS
-                    </span>
-                  </div>
+                  <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 w-full">
+                    {/* Stat 1 */}
+                    <div className="p-3 rounded-xl bg-[#faf4e6] border border-[#c8a355]/40
+                                    flex flex-col items-center justify-center gap-1
+                                    shadow-xs hover:border-[#8c1d1a] transition-all">
+                      <Users className="w-6 h-6 text-[#8c1d1a]" />
+                      <span className="font-inter text-xl font-black text-[#8c1d1a] leading-none">
+                        1000+
+                      </span>
+                      <span className="text-[10px] font-mono font-bold text-[#3a2216] uppercase tracking-wider leading-none">
+                        PARTICIPANTS
+                      </span>
+                    </div>
 
-                  {/* Stat 2 */}
-                  <div className="p-3 rounded-xl bg-[#faf4e6] border border-[#c8a355]/40 text-center flex flex-col items-center justify-center gap-1 shadow-xs hover:border-[#8c1d1a] transition-all">
-                    <Compass className="w-6 h-6 text-[#8c1d1a]" />
-                    <span className="font-pirate text-2xl font-black text-[#8c1d1a] leading-none relative -top-px">
-                      200+
-                    </span>
-                    <span className="text-[10px] font-mono font-bold text-[#3a2216] uppercase tracking-wider leading-none">
-                      TEAMS
-                    </span>
-                  </div>
+                    {/* Stat 2 */}
+                    <div className="p-3 rounded-xl bg-[#faf4e6] border border-[#c8a355]/40
+                                    flex flex-col items-center justify-center gap-1
+                                    shadow-xs hover:border-[#8c1d1a] transition-all">
+                      <Compass className="w-6 h-6 text-[#8c1d1a]" />
+                      <span className="font-inter text-xl font-black text-[#8c1d1a] leading-none">
+                        200+
+                      </span>
+                      <span className="text-[10px] font-mono font-bold text-[#3a2216] uppercase tracking-wider leading-none">
+                        TEAMS
+                      </span>
+                    </div>
 
-                  {/* Stat 3 */}
-                  <div className="p-3 rounded-xl bg-[#faf4e6] border border-[#c8a355]/40 text-center flex flex-col items-center justify-center gap-1 shadow-xs hover:border-[#8c1d1a] transition-all">
-                    <ScrollText className="w-6 h-6 text-[#8c1d1a]" />
-                    <span className="font-pirate text-2xl font-black text-[#8c1d1a] leading-none relative -top-px">
-                      30+
-                    </span>
-                    <span className="text-[10px] font-mono font-bold text-[#3a2216] uppercase tracking-wider leading-none">
-                      TRACKS
-                    </span>
-                  </div>
+                    {/* Stat 3 */}
+                    <div className="p-3 rounded-xl bg-[#faf4e6] border border-[#c8a355]/40
+                                    flex flex-col items-center justify-center gap-1
+                                    shadow-xs hover:border-[#8c1d1a] transition-all">
+                      <ScrollText className="w-6 h-6 text-[#8c1d1a]" />
+                      <span className="font-inter text-xl font-black text-[#8c1d1a] leading-none">
+                        30+
+                      </span>
+                      <span className="text-[10px] font-mono font-bold text-[#3a2216] uppercase tracking-wider leading-none">
+                        TRACKS
+                      </span>
+                    </div>
 
-                  {/* Stat 4 */}
-                  <div className="p-3 rounded-xl bg-[#faf4e6] border border-[#c8a355]/40 text-center flex flex-col items-center justify-center gap-1 shadow-xs hover:border-[#8c1d1a] transition-all">
-                    <Gift className="w-6 h-6 text-[#8c1d1a]" />
-                    <span className="font-pirate text-xl font-black text-[#8c1d1a] leading-none relative -top-px">
-                      EXCITING
-                    </span>
-                    <span className="text-[10px] font-mono font-bold text-[#3a2216] uppercase tracking-wider leading-none">
-                      PRIZES
-                    </span>
-                  </div>
+                    {/* Stat 4 */}
+                    <div className="p-3 rounded-xl bg-[#faf4e6] border border-[#c8a355]/40
+                                    flex flex-col items-center justify-center gap-1
+                                    shadow-xs hover:border-[#8c1d1a] transition-all">
+                      <Gift className="w-6 h-6 text-[#8c1d1a]" />
+                      <span className="font-inter text-xl font-black text-[#8c1d1a] leading-none">
+                        EXCITING
+                      </span>
+                      <span className="text-[10px] font-mono font-bold text-[#3a2216] uppercase tracking-wider leading-none">
+                        PRIZES
+                      </span>
+                    </div>
 
-                  {/* Stat 5 */}
-                  <div className="p-3 rounded-xl bg-[#faf4e6] border border-[#c8a355]/40 text-center flex flex-col items-center justify-center gap-1 shadow-xs hover:border-[#8c1d1a] transition-all col-span-2 sm:col-span-1">
-                    <GraduationCap className="w-6 h-6 text-[#8c1d1a]" />
-                    <span className="font-pirate text-lg font-black text-[#8c1d1a] leading-none relative -top-px">
-                      UNLIMITED
-                    </span>
-                    <span className="text-[10px] font-mono font-bold text-[#3a2216] uppercase tracking-wider leading-none">
-                      OPPORTUNITIES
-                    </span>
+                    {/* Stat 5 */}
+                    <div className="p-3 rounded-xl bg-[#faf4e6] border border-[#c8a355]/40
+                                    flex flex-col items-center justify-center gap-1
+                                    shadow-xs hover:border-[#8c1d1a] transition-all col-span-2 sm:col-span-1">
+                      <GraduationCap className="w-6 h-6 text-[#8c1d1a]" />
+                      <span className="font-inter text-lg font-black text-[#8c1d1a] leading-none">
+                        UNLIMITED
+                      </span>
+                      <span className="text-[10px] font-mono font-bold text-[#3a2216] uppercase tracking-wider leading-none">
+                        OPPORTUNITIES
+                      </span>
+                    </div>
                   </div>
-                </div>
               </div>
             </div>
           </div>
