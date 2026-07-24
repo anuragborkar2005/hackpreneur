@@ -288,9 +288,6 @@ export default function OrganizersSection() {
                 <h4 className="font-serif font-bold text-lg text-[#ffd700] leading-tight">
                   Dhairya Deulkar
                 </h4>
-                <span className="text-xs text-amber-100/90 font-mono mt-1 font-semibold">
-                  Frontend & UI Engineer
-                </span>
               </div>
             </div>
           </div>
