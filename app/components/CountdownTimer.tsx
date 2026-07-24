@@ -2,7 +2,7 @@
 
 import React, { useSyncExternalStore } from "react";
 
-const TARGET_DATE = new Date("2026-08-06T09:00:00Z").getTime();
+const TARGET_DATE = new Date("2026-08-07T08:00:00Z").getTime();
 
 const emptySubscribe = () => () => {};
 

@@ -122,7 +122,7 @@ export default function AboutSection({
                                     shadow-xs hover:border-[#8c1d1a] transition-all">
                       <Users className="w-6 h-6 text-[#8c1d1a]" />
                       <span className="font-inter text-xl font-black text-[#8c1d1a] leading-none">
-                        1000+
+                        250+
                       </span>
                       <span className="text-[10px] font-mono font-bold text-[#3a2216] uppercase tracking-wider leading-none">
                         PARTICIPANTS
@@ -135,7 +135,7 @@ export default function AboutSection({
                                     shadow-xs hover:border-[#8c1d1a] transition-all">
                       <Compass className="w-6 h-6 text-[#8c1d1a]" />
                       <span className="font-inter text-xl font-black text-[#8c1d1a] leading-none">
-                        200+
+                        60+
                       </span>
                       <span className="text-[10px] font-mono font-bold text-[#3a2216] uppercase tracking-wider leading-none">
                         TEAMS
@@ -148,7 +148,7 @@ export default function AboutSection({
                                     shadow-xs hover:border-[#8c1d1a] transition-all">
                       <ScrollText className="w-6 h-6 text-[#8c1d1a]" />
                       <span className="font-inter text-xl font-black text-[#8c1d1a] leading-none">
-                        30+
+                        15+
                       </span>
                       <span className="text-[10px] font-mono font-bold text-[#3a2216] uppercase tracking-wider leading-none">
                         TRACKS
