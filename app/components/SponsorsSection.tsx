@@ -1,206 +1,31 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { Users, Megaphone, Compass, Package } from "lucide-react";
 import {
   PirateScrollReveal,
   PirateInteractiveCard,
   PirateSpinWheel,
-  PirateShipFloat,
 } from "./PirateMotion";
 
 export default function SponsorsSection() {
-  const platinumSponsors = [
+  const sponsors = [
     {
-      name: "Google",
-      logo: (
-        <div className="flex items-center gap-1 font-sans font-bold text-2xl tracking-tight">
-          <span className="text-[#4285F4]">G</span>
-          <span className="text-[#EA4335]">o</span>
-          <span className="text-[#FBBC05]">o</span>
-          <span className="text-[#4285F4]">g</span>
-          <span className="text-[#34A853]">l</span>
-          <span className="text-[#EA4335]">e</span>
-        </div>
-      ),
+      name: "IDP",
+      logo: "/sponsors/IDP.jpg",
     },
     {
-      name: "Microsoft",
-      logo: (
-        <div className="flex items-center gap-2 font-sans font-semibold text-xl text-[#5e5e5e]">
-          <div className="grid grid-cols-2 gap-0.5 w-5 h-5 shrink-0">
-            <div className="bg-[#f25022] w-full h-full" />
-            <div className="bg-[#7fba00] w-full h-full" />
-            <div className="bg-[#00a4ef] w-full h-full" />
-            <div className="bg-[#ffb900] w-full h-full" />
-          </div>
-          <span>Microsoft</span>
-        </div>
-      ),
+      name: "Qythera",
+      logo: "/sponsors/Qythera.jpg",
     },
     {
-      name: "AWS",
-      logo: (
-        <div className="flex flex-col items-center leading-none">
-          <span className="font-sans font-black text-2xl text-[#232f3e] tracking-tighter">
-            aws
-          </span>
-          <div className="w-10 h-2 border-b-2 border-r-2 border-[#ff9900] rounded-full transform -rotate-12 -mt-1" />
-        </div>
-      ),
+      name: "Runbhumi",
+      logo: "/sponsors/Runbhumi.jpg",
     },
     {
-      name: "Devfolio",
-      logo: (
-        <div className="flex items-center gap-2 font-sans font-bold text-xl text-[#3770FF]">
-          <div className="w-6 h-6 bg-[#3770FF] rounded-sm transform rotate-45 flex items-center justify-center">
-            <div className="w-2.5 h-2.5 bg-white rounded-xs" />
-          </div>
-          <span className="text-[#273240] tracking-tight">Devfolio</span>
-        </div>
-      ),
-    },
-    {
-      name: "MLH",
-      logo: (
-        <div className="flex flex-col items-center leading-none">
-          <span className="font-sans font-extrabold text-2xl tracking-tighter bg-gradient-to-r from-[#D92C27] via-[#0089C3] to-[#F1B522] bg-clip-text text-transparent">
-            MLH
-          </span>
-          <span className="text-[7px] font-mono font-bold tracking-widest text-[#231f20] mt-0.5 uppercase">
-            MAJOR LEAGUE HACKING
-          </span>
-        </div>
-      ),
-    },
-  ];
-
-  const goldSponsors = [
-    {
-      name: "GitHub",
-      logo: (
-        <div className="flex items-center gap-2 font-sans font-bold text-lg text-[#24292e]">
-          <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
-            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-          </svg>
-          <span>GitHub</span>
-        </div>
-      ),
-    },
-    {
-      name: "Intel",
-      logo: (
-        <div className="font-sans font-bold text-2xl text-[#0068B5] tracking-tight flex items-center">
-          <span>intel</span>
-          <span className="w-1.5 h-1.5 bg-[#0068B5] rounded-full self-start mt-1 ml-0.5" />
-        </div>
-      ),
-    },
-    {
-      name: "Docker",
-      logo: (
-        <div className="flex items-center gap-2 font-sans font-extrabold text-lg text-[#1D63ED] tracking-wider uppercase">
-          <div className="w-6 h-5 bg-[#1D63ED] rounded-xs relative flex items-center justify-center">
-            <div className="w-1.5 h-1 bg-white absolute top-1 left-1" />
-          </div>
-          <span>DOCKER</span>
-        </div>
-      ),
-    },
-    {
-      name: "Postman",
-      logo: (
-        <div className="flex items-center gap-2 font-sans font-bold text-base text-[#FF6C37] tracking-wider uppercase">
-          <div className="w-6 h-6 rounded-full bg-[#FF6C37] text-white flex items-center justify-center font-black text-xs">
-            🚀
-          </div>
-          <span className="text-[#1C2733]">POSTMAN</span>
-        </div>
-      ),
-    },
-    {
-      name: "MongoDB",
-      logo: (
-        <div className="flex items-center gap-1.5 font-sans font-bold text-lg text-[#001E2B]">
-          <span className="text-[#00ED64] text-xl font-serif">🍃</span>
-          <span>MongoDB</span>
-        </div>
-      ),
-    },
-    {
-      name: "Replit",
-      logo: (
-        <div className="flex items-center gap-2 font-sans font-extrabold text-lg text-[#F26207] tracking-wider uppercase">
-          <div className="w-5 h-5 bg-[#F26207] rounded-xs flex items-center justify-center text-white text-xs font-mono font-bold">
-            R
-          </div>
-          <span className="text-[#0D1525]">REPLIT</span>
-        </div>
-      ),
-    },
-  ];
-
-  const silverSponsors = [
-    {
-      name: "HackerRank",
-      logo: (
-        <div className="flex items-center gap-2 font-sans font-bold text-base text-[#2EC866]">
-          <div className="w-5 h-5 bg-[#2EC866] text-white flex items-center justify-center rounded-xs font-black text-xs">
-            H
-          </div>
-          <span className="text-[#0E141E]">HackerRank</span>
-        </div>
-      ),
-    },
-    {
-      name: "DigitalOcean",
-      logo: (
-        <div className="flex items-center gap-2 font-sans font-semibold text-base text-[#0080FF]">
-          <div className="w-5 h-5 bg-[#0080FF] rounded-full flex items-center justify-center text-white text-[10px] font-bold">
-            DO
-          </div>
-          <span>DigitalOcean</span>
-        </div>
-      ),
-    },
-    {
-      name: "Canva",
-      logo: (
-        <div className="font-serif italic font-bold text-2xl text-transparent bg-clip-text bg-gradient-to-r from-[#00C4CC] to-[#7D2AE8]">
-          Canva
-        </div>
-      ),
-    },
-    {
-      name: "AWS Educate",
-      logo: (
-        <div className="flex items-center gap-1 font-sans font-bold text-sm text-[#232f3e]">
-          <span>aws</span>
-          <span className="text-[#ff9900] font-normal">educate</span>
-        </div>
-      ),
-    },
-    {
-      name: "JetBrains",
-      logo: (
-        <div className="flex items-center gap-1 font-sans font-extrabold text-sm text-[#000000] tracking-wider">
-          <div className="w-4 h-4 bg-black text-white flex items-center justify-center text-[10px]">
-            _
-          </div>
-          <span>JETBRAINS</span>
-        </div>
-      ),
-    },
-    {
-      name: "Notion",
-      logo: (
-        <div className="flex items-center gap-2 font-sans font-bold text-base text-[#000000]">
-          <div className="w-5 h-5 border-2 border-black rounded-sm flex items-center justify-center font-mono text-xs font-black">
-            N
-          </div>
-          <span>Notion</span>
-        </div>
-      ),
+      name: "Saonerwala",
+      logo: "/sponsors/Saonerwala.jpeg",
     },
   ];
 
@@ -256,78 +81,38 @@ export default function SponsorsSection() {
           </p>
         </PirateScrollReveal>
 
-        {/* SPONSORS TIERS CONTAINER */}
-        <div className="space-y-8">
-          
-          {/* 1. PLATINUM SPONSORS */}
-          <div className="flex flex-col items-center">
-            {/* Tier Header Ribbon */}
-            <div className="bg-[#8c1d1a] text-[#fce8c3] px-8 py-2 rounded-lg font-pirate text-xl sm:text-2xl tracking-widest border border-[#d4af37]/60 shadow-md mb-4 flex items-center gap-3">
-              <span>✦</span>
-              <span>PLATINUM SPONSORS</span>
-              <span>✦</span>
-            </div>
-
-            {/* Logo Grid */}
-            <div className="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-              {platinumSponsors.map((sponsor, index) => (
-                <PirateInteractiveCard
-                  key={index}
-                  delay={index * 0.08}
-                  className="bg-white/90 backdrop-blur-xs border-2 border-[#b89562] rounded-2xl p-6 shadow-md hover:shadow-xl flex items-center justify-center min-h-[90px] text-center"
-                >
-                  {sponsor.logo}
-                </PirateInteractiveCard>
-              ))}
-            </div>
+        {/* SPONSORS CONTAINER */}
+        <div className="flex flex-col items-center space-y-6">
+          {/* Header Ribbon */}
+          <div className="bg-[#8c1d1a] text-[#fce8c3] px-8 py-2 rounded-lg font-pirate text-xl sm:text-2xl tracking-widest border border-[#d4af37]/60 shadow-md mb-2 flex items-center gap-3">
+            <span>✦</span>
+            <span>OFFICIAL SPONSORS</span>
+            <span>✦</span>
           </div>
 
-          {/* 2. GOLD SPONSORS */}
-          <div className="flex flex-col items-center">
-            {/* Tier Header Ribbon */}
-            <div className="bg-[#1b2a47] text-[#ffd700] px-8 py-2 rounded-lg font-pirate text-xl sm:text-2xl tracking-widest border border-[#d4af37]/60 shadow-md mb-4 flex items-center gap-3">
-              <span>✦</span>
-              <span>GOLD SPONSORS</span>
-              <span>✦</span>
-            </div>
-
-            {/* Logo Grid */}
-            <div className="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-              {goldSponsors.map((sponsor, index) => (
-                <PirateInteractiveCard
-                  key={index}
-                  delay={index * 0.06}
-                  className="bg-white/90 backdrop-blur-xs border-2 border-[#b89562] rounded-2xl p-5 shadow-md hover:shadow-xl flex items-center justify-center min-h-[85px] text-center"
-                >
-                  {sponsor.logo}
-                </PirateInteractiveCard>
-              ))}
-            </div>
+          {/* Logo Grid */}
+          <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-2 sm:px-4">
+            {sponsors.map((sponsor, index) => (
+              <PirateInteractiveCard
+                key={index}
+                delay={index * 0.08}
+                className="bg-white/95 backdrop-blur-xs border-2 border-[#b89562] rounded-2xl p-6 shadow-md hover:shadow-xl flex flex-col items-center justify-center min-h-[150px] text-center group transition-all duration-300"
+              >
+                <div className="relative w-full h-24 flex items-center justify-center">
+                  <Image
+                    src={sponsor.logo}
+                    alt={sponsor.name}
+                    width={240}
+                    height={120}
+                    className="max-h-20 w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <span className="mt-3 text-[#2b1810] font-sans font-bold text-base tracking-wide">
+                  {sponsor.name}
+                </span>
+              </PirateInteractiveCard>
+            ))}
           </div>
-
-          {/* 3. SILVER SPONSORS */}
-          <div className="flex flex-col items-center">
-            {/* Tier Header Ribbon */}
-            <div className="bg-[#3a2012] text-[#fce8c3] px-8 py-2 rounded-lg font-pirate text-xl sm:text-2xl tracking-widest border border-[#8c5a2b] shadow-md mb-4 flex items-center gap-3">
-              <PirateSpinWheel>☸</PirateSpinWheel>
-              <span>SILVER SPONSORS</span>
-              <PirateSpinWheel>☸</PirateSpinWheel>
-            </div>
-
-            {/* Logo Grid */}
-            <div className="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-              {silverSponsors.map((sponsor, index) => (
-                <PirateInteractiveCard
-                  key={index}
-                  delay={index * 0.05}
-                  className="bg-white/90 backdrop-blur-xs border-2 border-[#b89562] rounded-2xl p-5 shadow-md hover:shadow-xl flex items-center justify-center min-h-[80px] text-center"
-                >
-                  {sponsor.logo}
-                </PirateInteractiveCard>
-              ))}
-            </div>
-          </div>
-
         </div>
 
         {/* BOTTOM SECTION: WHY PARTNER WITH HACKPRENEUR? & TOGETHER BANNER */}
