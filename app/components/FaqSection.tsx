@@ -7,24 +7,28 @@ export default function FaqSection() {
 
   const faqs = [
     {
-      q: "Who can board the HACKPRENEUR galleon?",
-      a: "Developers, designers, AI researchers, Web3 engineers, and students of all experience levels are welcome! Whether you are a seasoned ship captain or a solo powder monkey, you can join.",
+      q: "What is HackPreneur '26 and when is it taking place?",
+      a: "HackPreneur '26 is the 1’st International Innovation Hackathon presented by Itechroots 16.0. It is a 12-hour hybrid hackathon happening on 8th August 2026 at IT Department, YCCE.",
     },
     {
-      q: "What is the team size limit for the hackathon?",
-      a: "Teams can range from 1 to 4 buccaneers. If you don't have a team before the hackathon, our Discord matchmaking channel and Day 1 speed-networking event will help you find crew members.",
+      q: "What is the team size and registration fee?",
+      a: "Teams can have 4 to 6 members. The registration fee is ₹600 per team. You can register via the official form link.",
     },
     {
-      q: "How are projects judged and bounties awarded?",
-      a: "Projects are evaluated by industry judges based on Technical Depth, Originality/Innovation, UI/UX polish, and Practical Utility. Cash prizes and crypto bounty grants are disbursed post-event.",
+      q: "What are the prizes for HackPreneur '26?",
+      a: "🥇 1st Prize: ₹21,000 | 🥈 2nd Prize: ₹15,000 | 🥉 3rd Prize: ₹5K Capello Vouchers, plus trophies, certificates, and exciting perks!",
     },
     {
-      q: "Is there a registration fee or cost to enter?",
-      a: "Zero golden coins! HACKPRENEUR 2026 is 100% free for all accepted participants, including free cloud computing credits, API keys, and swag packs.",
+      q: "Who is partnering for HackPreneur '26?",
+      a: "GDG Cloud Nagpur (Google Developer Group Cloud Nagpur) is partnering with HackPreneur '26 alongside Qythera.",
     },
     {
-      q: "Can I build on a project I started before the event?",
-      a: "All hackathon code must be written during the 48-hour event window. You may bring ideas, wireframes, and open-source libraries, but main development begins at Anchors Weigh on Day 1.",
+      q: "How can I participate if I am not on campus?",
+      a: "HackPreneur '26 is conducted in Hybrid Mode, allowing remote/online participation as well as in-person hackathon attendance at the IT Department, YCCE.",
+    },
+    {
+      q: "Whom can I contact for queries?",
+      a: "You can reach out directly to the organizers: Tejasvi Jadhao (VP, CSI) at 9403315952 or Ojas Satdeve (Secretary, CSI) at 8856012282.",
     },
   ];
 

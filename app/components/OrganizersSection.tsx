@@ -96,16 +96,44 @@ export default function OrganizersSection() {
             </div>
           </div>
 
-          {/* 2. ORGANISERS (Col 6 on lg) */}
+          {/* 2. ORGANIZERS & HELPLINE (Col 6 on lg) */}
           <div className="lg:col-span-6 bg-[#f6ebd4] border-2 border-[#b89562] rounded-2xl p-5 shadow-xl relative flex flex-col justify-between overflow-hidden">
             {/* Header Banner */}
             <div className="w-full bg-[#3a2012] text-[#fce8c3] py-2 px-3 rounded-lg text-center font-pirate text-lg tracking-wider font-bold mb-6 flex items-center justify-center gap-2 border border-[#8c5a2b]">
               <span>⚔</span>
-              <span>ORGANISERS</span>
+              <span>ORGANIZERS & HELPLINE</span>
+              <span>⚔</span>
             </div>
 
             {/* Members */}
             <div className="grid grid-cols-2 gap-4 mb-4">
+              {/* Tejasvi Jadhao */}
+              <div className="flex flex-col items-center text-center">
+                <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full p-1 bg-gradient-to-b from-[#d4af37] via-[#8c5a2b] to-[#3a2012] shadow-md mb-2">
+                  <div className="w-full h-full rounded-full overflow-hidden relative border-2 border-[#f6ebd4]">
+                    <Image
+                      src="/organisers/Tejasvi.jpg"
+                      alt="Tejasvi Jadhao"
+                      fill
+                      sizes="96px"
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+                <h4 className="font-serif font-bold text-base text-[#2b1810] leading-tight">
+                  Tejasvi Jadhao
+                </h4>
+                <p className="text-xs text-[#8c1d1a] font-sans font-bold mt-0.5">
+                  VP, CSI
+                </p>
+                <a
+                  href="tel:9403315952"
+                  className="mt-2 px-3 py-1 bg-[#8c1d1a] text-[#fce8c3] text-xs font-mono font-bold rounded-lg shadow-xs hover:bg-[#a81c19] transition-colors flex items-center gap-1"
+                >
+                  📞 9403315952
+                </a>
+              </div>
+
               {/* Ojas Satdeve */}
               <div className="flex flex-col items-center text-center">
                 <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full p-1 bg-linear-to-b from-[#d4af37] via-[#8c5a2b] to-[#3a2012] shadow-md mb-2">
@@ -122,30 +150,15 @@ export default function OrganizersSection() {
                 <h4 className="font-serif font-bold text-base text-[#2b1810] leading-tight">
                   Ojas Satdeve
                 </h4>
-                <p className="text-xs text-[#8c1d1a] font-sans font-semibold mt-0.5">
-                  Organiser & Event Lead
+                <p className="text-xs text-[#8c1d1a] font-sans font-bold mt-0.5">
+                  Secretary, CSI
                 </p>
-              </div>
-
-              {/* Tejasvini Jadhao */}
-              <div className="flex flex-col items-center text-center">
-                <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full p-1 bg-gradient-to-b from-[#d4af37] via-[#8c5a2b] to-[#3a2012] shadow-md mb-2">
-                  <div className="w-full h-full rounded-full overflow-hidden relative border-2 border-[#f6ebd4]">
-                    <Image
-                      src="/organisers/Tejasvi.jpg"
-                      alt="Tejasvini Jadhao"
-                      fill
-                      sizes="96px"
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-                <h4 className="font-serif font-bold text-base text-[#2b1810] leading-tight">
-                  Tejasvi Jadhao
-                </h4>
-                <p className="text-xs text-[#8c1d1a] font-sans font-semibold mt-0.5">
-                  Organiser & Event Lead
-                </p>
+                <a
+                  href="tel:8856012282"
+                  className="mt-2 px-3 py-1 bg-[#8c1d1a] text-[#fce8c3] text-xs font-mono font-bold rounded-lg shadow-xs hover:bg-[#a81c19] transition-colors flex items-center gap-1"
+                >
+                  📞 8856012282
+                </a>
               </div>
             </div>
 
@@ -290,52 +303,7 @@ export default function OrganizersSection() {
             </div>
           </div>
 
-          {/* ORGANIZING PARTNERS (Col 12) */}
-          <div className="lg:col-span-12 bg-[#f6ebd4] border-2 border-[#d4af37] rounded-2xl p-6 shadow-xl relative flex flex-col justify-between overflow-hidden">
-            {/* Header Banner */}
-            <div className="w-full bg-[#8c1d1a] text-[#fce8c3] py-2 px-4 rounded-lg text-center font-pirate text-xl tracking-wider font-bold mb-6 flex items-center justify-center gap-2 border border-[#d4af37]/60 shadow-md">
-              <span>👑</span>
-              <span>ORGANIZING PARTNERS</span>
-              <span>👑</span>
-            </div>
 
-            {/* Organizing Partner Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto w-full">
-              {/* Qythera */}
-              <div className="flex flex-col items-center p-5 rounded-xl bg-[#ede2c8]/80 border border-[#d4af37] shadow-md hover:shadow-xl transition-all text-center group">
-                <div className="relative w-full h-24 flex items-center justify-center mb-2">
-                  <Image
-                    src="/sponsors/Qythera.jpg"
-                    alt="Qythera"
-                    width={220}
-                    height={110}
-                    className="max-h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <h4 className="font-serif font-bold text-lg text-[#2b1810]">Qythera</h4>
-                <span className="inline-block mt-1.5 px-3 py-0.5 bg-[#8c1d1a] text-[#fce8c3] text-xs font-pirate tracking-wider rounded-full shadow-xs">
-                  Organizing Partner
-                </span>
-              </div>
-
-              {/* GFG */}
-              <div className="flex flex-col items-center p-5 rounded-xl bg-[#ede2c8]/80 border border-[#d4af37] shadow-md hover:shadow-xl transition-all text-center group">
-                <div className="relative w-full h-24 flex items-center justify-center mb-2">
-                  <Image
-                    src="/sponsors/GFG.jpg"
-                    alt="GeeksforGeeks"
-                    width={220}
-                    height={110}
-                    className="max-h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <h4 className="font-serif font-bold text-lg text-[#2b1810]">GeeksforGeeks (GFG)</h4>
-                <span className="inline-block mt-1.5 px-3 py-0.5 bg-[#8c1d1a] text-[#fce8c3] text-xs font-pirate tracking-wider rounded-full shadow-xs">
-                  Organizing Partner
-                </span>
-              </div>
-            </div>
-          </div>
 
         </div>
 

@@ -17,8 +17,8 @@ export default function SponsorsSection() {
       role: "Organizing Partner",
     },
     {
-      name: "GFG (GeeksforGeeks)",
-      logo: "/sponsors/GFG.jpg",
+      name: "GDG Cloud Nagpur",
+      logo: "/sponsors/GDG.png",
       role: "Organizing Partner",
     },
   ];
@@ -76,7 +76,7 @@ export default function SponsorsSection() {
         </PirateScrollReveal>
 
         {/* ORGANIZING PARTNERS CONTAINER */}
-        <div className="flex flex-col items-center space-y-6">
+        <div className="flex flex-col items-center space-y-6 pt-4">
           {/* Header Ribbon */}
           <div className="bg-[#8c1d1a] text-[#fce8c3] px-8 py-2 rounded-lg font-pirate text-xl sm:text-2xl tracking-widest border border-[#d4af37]/60 shadow-md mb-2 flex items-center gap-3">
             <span>👑</span>
@@ -93,18 +93,29 @@ export default function SponsorsSection() {
                 className="bg-white/95 backdrop-blur-xs border-2 border-[#d4af37] rounded-2xl p-6 shadow-lg hover:shadow-2xl flex flex-col items-center justify-center min-h-[170px] text-center group transition-all duration-300 relative overflow-hidden"
               >
                 <div className="absolute top-2 right-2 px-3 py-0.5 bg-[#8c1d1a] text-[#fce8c3] text-[11px] font-pirate tracking-wider rounded-full shadow-xs">
-                  Organizing Partner
+                  {partner.role}
                 </div>
                 <div className="relative w-full h-28 flex items-center justify-center mt-3">
-                  <Image
-                    src={partner.logo}
-                    alt={partner.name}
-                    width={260}
-                    height={130}
-                    className="max-h-24 w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
-                  />
+                  {partner.logo.startsWith("/") ? (
+                    <Image
+                      src={partner.logo}
+                      alt={partner.name}
+                      width={260}
+                      height={130}
+                      className="max-h-24 w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="flex flex-col items-center justify-center">
+                      <div className="w-16 h-16 rounded-2xl bg-white border-2 border-[#4285F4]/30 shadow-md flex items-center justify-center">
+                        <span className="text-3xl font-black text-[#4285F4]">GDG</span>
+                      </div>
+                      <span className="text-[11px] font-mono font-bold text-[#4285F4] uppercase tracking-wider mt-1">
+                        Google Developer Group
+                      </span>
+                    </div>
+                  )}
                 </div>
-                <span className="mt-3 text-[#2b1810] font-sans font-bold text-lg tracking-wide">
+                <span className="mt-2 text-[#2b1810] font-sans font-bold text-lg tracking-wide">
                   {partner.name}
                 </span>
               </PirateInteractiveCard>

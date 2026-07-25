@@ -28,32 +28,33 @@ export interface TechEvent {
 export const TECHFEST_EVENTS: TechEvent[] = [
   {
     id: "hackpreneur-2026",
-    title: "HackPreneur 2026",
+    title: "HackPreneur '26",
     category: "Hackathons",
     icon: "🏴‍☠️",
-    tagline: "The Ultimate Entrepreneurial Hackathon",
-    description: "The flagship hackathon of TechFest! Build groundbreaking solutions, prototype real-world products, and present to top mentors and investors.",
-    prizePool: "₹36,000",
+    tagline: "1’st International Innovation Hackathon | Presented by Itechroots 16.0",
+    description: "Spend less time. Win big.⚡️ Seize the opportunity! The premier 12-hour hybrid hackathon hosted at IT Department, YCCE in collaboration with GDG Cloud Nagpur.",
+    prizePool: "₹41,000 Total",
     prizesBreakdown: [
-      { place: "1st Winner", amount: "₹21,000 Cash Prize" },
-      { place: "2nd Winner", amount: "₹15,000 Cash Prize" },
-      { place: "3rd Winner", amount: "₹5,000 Vouchers & Swag" }
+      { place: "🥇 1st Winner", amount: "₹21,000 Cash Prize" },
+      { place: "🥈 2nd Winner", amount: "₹15,000 Cash Prize" },
+      { place: "🥉 3rd Winner", amount: "₹5K Capello Vouchers" }
     ],
-    teamSize: "2 - 4 Members",
-    entryFee: "₹200 / Team",
-    date: "6 - 7 August",
-    time: "09:00 AM Onwards",
-    venue: "IT Department",
-    tags: ["Hackathon", "AI", "Startup", "Web3", "Prototypes"],
+    teamSize: "Teams of 4 - 6",
+    entryFee: "₹600 / Team",
+    date: "8th August 2026",
+    time: "12 Hours (08:00 AM - 08:00 PM)",
+    venue: "Hybrid Mode | IT Department, YCCE",
+    tags: ["Hackathon", "Innovation", "GDG Cloud", "Hybrid", "Startups"],
     rules: [
-      "All prototypes must be built during the hackathon timeline.",
-      "Mentors will guide teams through pitch preparation and tech architecture.",
-      "Final presentation to judges on August 7th."
+      "Spend less time. Win big.⚡️ 12 Hours duration on 8th August 2026.",
+      "Teams must consist of 4 to 6 members with registration fee of ₹600/team.",
+      "Hybrid mode allows both online and offline participation at IT Department, YCCE.",
+      "Partner: GDG Cloud Nagpur."
     ],
     googleFormUrl: "https://forms.gle/GSExBRPYAzxPeDxq6",
     coordinators: [
-      { name: "Ojas Satdeve", phone: "Event Lead", role: "Organizer" },
-      { name: "Tejasvini Jadhao", phone: "Event Lead", role: "Organizer" }
+      { name: "Tejasvi Jadhao", phone: "9403315952", role: "VP, CSI" },
+      { name: "Ojas Satdeve", phone: "8856012282", role: "Secretary, CSI" }
     ],
     featured: true,
     badge: "FLAGSHIP HACKATHON"
@@ -90,30 +91,31 @@ export const TECHFEST_EVENTS: TechEvent[] = [
   },
   {
     id: "agent-arena",
-    title: "Agent Arena",
+    title: "AgentArena",
     category: "AI & Robotics",
     icon: "🤖",
-    tagline: "Autonomous AI Agents & Swarm Battle",
-    description: "Deploy autonomous AI agents to perform complex automation, multi-agent collaboration, and decision-making challenges.",
+    tagline: "Build AI agents to solve Real-world Challenge",
+    description: "1 Round autonomous AI agents battle to build agentic workflows and tackle complex real-world challenges.",
     prizePool: "₹2,000",
     prizesBreakdown: [
       { place: "1st Prize", amount: "₹1,200" },
       { place: "2nd Prize", amount: "₹800" }
     ],
-    teamSize: "Team (3 Max)",
-    entryFee: "₹100 / individual or ₹250 / team",
-    date: "6 August",
+    teamSize: "3 Members (max)",
+    entryFee: "₹250 / team",
+    date: "6th August 2026",
     time: "11:00 AM Onwards",
-    venue: "IT Department",
+    venue: "IT Department, YCCE",
     tags: ["AI Agents", "LLMs", "Automation", "Python"],
     rules: [
-      "Agents built using Python, LangChain, or custom LLM frameworks.",
-      "Performance evaluated on latency, accuracy, and autonomy."
+      "1 Round challenge.",
+      "Build AI agents to solve real-world problems.",
+      "Evaluated on technical innovation, autonomy, and speed."
     ],
     googleFormUrl: "https://forms.gle/GSExBRPYAzxPeDxq6",
     coordinators: [
-      { name: "Sahil Nihate", phone: "9226031904", role: "Event Lead" },
-      { name: "Sahil Chaudhari", phone: "9226031904", role: "Co-Lead" }
+      { name: "Sahil Choudhari", phone: "9527649440", role: "Organizer" },
+      { name: "Sahil Nihate", phone: "9226031904", role: "Organizer" }
     ],
     featured: true,
     badge: "AI BATTLE"
@@ -123,8 +125,8 @@ export const TECHFEST_EVENTS: TechEvent[] = [
     title: "Code Clash",
     category: "Coding & CTF",
     icon: "💻",
-    tagline: "Head-to-Head Speed Coding Battle",
-    description: "Battle it out in a competitive coding showdown testing speed algorithms, data structures, and optimized problem solving.",
+    tagline: "1 Round Speed Coding Challenge",
+    description: "Battle it out in a competitive coding challenge testing speed algorithms, data structures, and optimized problem solving.",
     prizePool: "₹1,500",
     prizesBreakdown: [
       { place: "1st Prize", amount: "₹1,000" },
@@ -132,28 +134,29 @@ export const TECHFEST_EVENTS: TechEvent[] = [
     ],
     teamSize: "Individual",
     entryFee: "₹80 / person",
-    date: "6 August",
+    date: "6th August 2026",
     time: "02:00 PM - 04:30 PM",
-    venue: "IT Department",
+    venue: "IT Department, YCCE",
     tags: ["Algorithms", "C++", "Python", "Java"],
     rules: [
+      "1 Round coding challenge.",
       "Languages supported: C++, C, Java, Python.",
       "Plagiarism checks strictly enforced."
     ],
     googleFormUrl: "https://forms.gle/GSExBRPYAzxPeDxq6",
     coordinators: [
-      { name: "Dharya Deulkar", phone: "9699634238", role: "Event Lead" },
-      { name: "Kunal Chaudhari", phone: "9699634238", role: "Co-Lead" }
+      { name: "Dhairya Deulkar", phone: "Organizer", role: "Lead" },
+      { name: "Kunal Chaudhary", phone: "Organizer", role: "Co-Lead" }
     ],
     featured: false
   },
   {
     id: "quiz-code",
-    title: "Quiz Code",
+    title: "Quiz2Code",
     category: "Coding & CTF",
     icon: "⚡",
-    tagline: "Ultimate Technical & Coding Brainteaser",
-    description: "Test your computer science fundamentals, syntax knowledge, and bug-hunting skills in a rapid technical quiz.",
+    tagline: "Technical Quiz & Coding Challenge",
+    description: "2 Rounds competition testing computer science fundamentals, syntax knowledge, and programming prowess.",
     prizePool: "₹1,500",
     prizesBreakdown: [
       { place: "1st Prize", amount: "₹1,000" },
@@ -161,135 +164,112 @@ export const TECHFEST_EVENTS: TechEvent[] = [
     ],
     teamSize: "Individual",
     entryFee: "₹75 / person",
-    date: "6 August",
+    date: "6th August 2026",
     time: "10:30 AM - 12:30 PM",
-    venue: "IT Department",
-    tags: ["Tech Quiz", "Syntax", "Debugging", "CS Fundamentals"],
+    venue: "IT Department, YCCE",
+    tags: ["Tech Quiz", "Syntax", "Debugging", "Coding"],
     rules: [
-      "Round 1: MCQ Elimination Round.",
-      "Round 2: Output prediction and rapid debugging."
+      "Round 1: Technical Quiz.",
+      "Round 2: Coding Challenge."
     ],
     googleFormUrl: "https://forms.gle/GSExBRPYAzxPeDxq6",
     coordinators: [
-      { name: "Tanmay Manker", phone: "8261011962", role: "Event Lead" },
-      { name: "Tilak Rathi", phone: "8830998981", role: "Co-Lead" }
+      { name: "Tilak Rathi", phone: "8830998981", role: "Organizer" },
+      { name: "Tanmay Mankar", phone: "8261011962", role: "Organizer" }
     ],
     featured: false
-  },
-  {
-    id: "prompt-athon",
-    title: "Prompt-Athon",
-    category: "AI & Robotics",
-    icon: "🧠",
-    tagline: "GenAI Prompt Engineering Sprint",
-    description: "Master AI creativity! Craft flawless prompts to produce cinematic visuals, dynamic animations, and breathtaking digital art with GenAI.",
-    prizePool: "₹1,500",
-    prizesBreakdown: [
-      { place: "1st Prize", amount: "₹1,000" },
-      { place: "2nd Prize", amount: "₹500" }
-    ],
-    teamSize: "Individual",
-    entryFee: "₹99 / person",
-    date: "7 August",
-    time: "11:00 AM - 01:30 PM",
-    venue: "IT Department",
-    tags: ["ChatGPT", "Midjourney", "Prompt Engineering", "GenAI"],
-    rules: [
-      "Participants given live prompt constraints and target outputs.",
-      "Scored on precision, creativity, and speed."
-    ],
-    googleFormUrl: "https://forms.gle/GSExBRPYAzxPeDxq6",
-    coordinators: [
-      { name: "Anurag Borkar", phone: "8788440448", role: "Event Lead" },
-      { name: "Akashay Mahalle", phone: "8788440448", role: "Co-Lead" }
-    ],
-    featured: true,
-    badge: "GEN-AI SPECIAL"
   },
   {
     id: "poster-design",
     title: "Poster Design",
     category: "Design & Web",
     icon: "🎨",
-    tagline: "Digital Graphic & UI Poster Creation",
-    description: "Unleash your visual creativity by designing themed digital posters, UI graphics, and artistic publicity materials.",
-    prizePool: "₹1,000",
+    tagline: "Into the unknown",
+    description: "Unleash your visual creativity in a 1-round digital poster design challenge based on the theme 'Into the unknown'.",
+    prizePool: "₹1,500",
     prizesBreakdown: [
       { place: "1st Prize", amount: "₹1,000" },
       { place: "2nd Prize", amount: "₹500" }
     ],
     teamSize: "Individual",
-    entryFee: "₹80 / person",
-    date: "7 August",
+    entryFee: "₹80 / team",
+    date: "7th August 2026",
     time: "01:00 PM - 03:30 PM",
-    venue: "IT Department",
+    venue: "IT Department, YCCE",
     tags: ["Figma", "Photoshop", "Graphic Design", "UI/UX"],
     rules: [
-      "Theme revealed at start of competition.",
+      "1 Round competition.",
+      "Theme: Into the unknown.",
       "Design tools allowed: Figma, Photoshop, Illustrator, Canva."
     ],
     googleFormUrl: "https://forms.gle/GSExBRPYAzxPeDxq6",
     coordinators: [
-      { name: "Sahil Ingle", phone: "7020838273", role: "Event Lead" },
-      { name: "Shreeti Gordhan", phone: "7020838273", role: "Co-Lead" }
+      { name: "Sahil Ingle", phone: "Organizer", role: "Lead" },
+      { name: "Shreeti Gowardhan", phone: "Organizer", role: "Co-Lead" }
     ],
     featured: false
   },
   {
-    id: "beat-the-mark",
-    title: "Beat The Mark",
-    category: "Coding & CTF",
-    icon: "🎯",
-    tagline: "Precision & Speed Skill Benchmark",
-    description: "Beat the benchmark score across algorithmic tasks, typing speed, and analytical reasoning challenges.",
-    prizePool: "₹1,000",
+    id: "free-fire",
+    title: "Free Fire 🔥",
+    category: "Gaming & Esports",
+    icon: "🔥",
+    tagline: "Battle Royale Mobile Showdown",
+    description: "Squad battle in Free Fire! 4 Main Players + 1 Substitute. Final matches held offline at IT Department, YCCE.",
+    prizePool: "₹3,000",
     prizesBreakdown: [
-      { place: "Top Scorer", amount: "₹1,000 Cash Prize" }
-    ],
-    teamSize: "Individual",
-    entryFee: "₹60 / person",
-    date: "6 August",
-    time: "03:00 PM - 05:00 PM",
-    venue: "IT Department",
-    tags: ["Speed Test", "Reasoning", "Precision", "Logic"],
-    rules: [
-      "Speed + accuracy scoring system.",
-      "Highest score above baseline mark wins."
-    ],
-    googleFormUrl: "https://forms.gle/GSExBRPYAzxPeDxq6",
-    coordinators: [
-      { name: "Krutika Mulkar", phone: "9673435363", role: "Event Lead" },
-      { name: "Suhani Chaudhary", phone: "9673435363", role: "Co-Lead" }
-    ],
-    featured: false
-  },
-  {
-    id: "story-in-second",
-    title: "Story In Second",
-    category: "Workshops",
-    icon: "🎬",
-    tagline: "Short-Form Video & Reel Storytelling",
-    description: "Create compelling 60-second video stories, tech reels, or cinematic short clips based on TechFest themes.",
-    prizePool: "₹2,500",
-    prizesBreakdown: [
-      { place: "1st Prize", amount: "₹1,500" },
+      { place: "1st Prize", amount: "₹2,000" },
       { place: "2nd Prize", amount: "₹1,000" }
     ],
-    teamSize: "Individual",
-    entryFee: "₹100 / person",
-    date: "6 August",
-    time: "01:00 PM - 04:00 PM",
-    venue: "IT Department",
-    tags: ["Reels", "Video Editing", "Content Creation", "Storytelling"],
+    teamSize: "4 Main Players + 1 Substitute",
+    entryFee: "₹200 / team",
+    date: "6th August 2026",
+    time: "02:00 PM Onwards",
+    venue: "IT Department, YCCE (Offline Finals)",
+    tags: ["Free Fire", "Mobile Gaming", "Esports", "Battle Royale"],
     rules: [
-      "Video duration: max 60 seconds.",
-      "Judged on creativity, storytelling, editing quality, and impact."
+      "Final Matches will be held offline so every member should be present at the time.",
+      "Fill the registration form, scan QR and pay fees, upload the payment receipt.",
+      "Registration requires Team Name, Captain's Full Name & Phone, and Player Details (Full Name, In-Game Name, In-Game UID) for all 4–5 members.",
+      "Once registered you cannot change players.",
+      "After registering, join the official WhatsApp group for match updates: https://chat.whatsapp.com/BeNL1ydtsiiF19jki7rE1A?s=cl&p=a&ilr=4"
     ],
     googleFormUrl: "https://forms.gle/GSExBRPYAzxPeDxq6",
     coordinators: [
-      { name: "Sameer Bhatkar", phone: "8317234906", role: "Event Lead" }
+      { name: "Esports Lead", phone: "Community", role: "Organizer" }
     ],
-    featured: false
+    featured: true,
+    badge: "OFFLINE FINALS"
+  },
+  {
+    id: "bgmi-championship",
+    title: "BGMI",
+    category: "Gaming & Esports",
+    icon: "📱",
+    tagline: "Battlegrounds Mobile India Esports",
+    description: "Dominate the battlegrounds across intense mobile gaming rounds on 6th and 7th August!",
+    prizePool: "₹3,000",
+    prizesBreakdown: [
+      { place: "1st Prize", amount: "₹2,000" },
+      { place: "2nd Prize", amount: "₹1,000" }
+    ],
+    teamSize: "4-5 Players",
+    entryFee: "₹50 / person (₹200 - ₹250 / team)",
+    date: "6 & 7 Aug 2026",
+    time: "11:00 AM Onwards",
+    venue: "IT Department, YCCE",
+    tags: ["BGMI", "Esports", "Mobile Gaming", "Tournament"],
+    rules: [
+      "Strict mobile-only match regulations.",
+      "Squad size: 4-5 players."
+    ],
+    googleFormUrl: "https://forms.gle/GSExBRPYAzxPeDxq6",
+    coordinators: [
+      { name: "Parth Shirpurkar", phone: "9579346943", role: "Organizer" },
+      { name: "Samruddha Belsare", phone: "9764955548", role: "Organizer" }
+    ],
+    featured: true,
+    badge: "ESPORTS TOURNAMENT"
   },
   {
     id: "quiz-mania",
@@ -297,113 +277,27 @@ export const TECHFEST_EVENTS: TechEvent[] = [
     category: "Workshops",
     icon: "❓",
     tagline: "General Trivia & Tech Brain Battle",
-    description: "Fun, engaging quiz covering tech trivia, pop culture, sci-fi, and general awareness.",
+    description: "Fun, engaging general trivia and technical quiz battle to test your awareness and quick thinking.",
     prizePool: "₹1,000",
     prizesBreakdown: [
       { place: "1st Prize", amount: "₹1,000" }
     ],
     teamSize: "Individual",
     entryFee: "₹65 / person",
-    date: "7 August",
+    date: "7th August 2026",
     time: "02:00 PM - 04:00 PM",
-    venue: "IT Department",
-    tags: ["Trivia", "Quiz", "Pop Culture", "Fun"],
+    venue: "IT Department, YCCE",
+    tags: ["Trivia", "Quiz", "Tech", "Fun"],
     rules: [
-      "Buzzer round & rapid-fire final stage.",
-      "Open to all participants."
+      "Individual participation.",
+      "Buzzer round & rapid-fire final stage."
     ],
     googleFormUrl: "https://forms.gle/GSExBRPYAzxPeDxq6",
     coordinators: [
-      { name: "Shreshta Mishra", phone: "8788776587", role: "Event Lead" }
+      { name: "Shreshtha Mishra", phone: "8788776587", role: "Organizer" },
+      { name: "Asmita Paunikar", phone: "9326615050", role: "Organizer" }
     ],
     featured: false
-  },
-  {
-    id: "long-cricket",
-    title: "Long Cricket Tournament",
-    category: "Gaming & Esports",
-    icon: "🏏",
-    tagline: "Outdoor Box & Ground Cricket Cup",
-    description: "Assemble your 8-player squad and battle in the classic TechFest cricket tournament for ultimate trophy honors!",
-    prizePool: "₹8,000",
-    prizesBreakdown: [
-      { place: "Tournament Champions", amount: "₹8,000 + Trophy & Medals" }
-    ],
-    teamSize: "Team (8 Players)",
-    entryFee: "₹800 / team",
-    date: "24 - 26 July",
-    time: "08:00 AM Onwards",
-    venue: "IT Department",
-    tags: ["Cricket", "Outdoor Sports", "Tournament", "Team Battle"],
-    rules: [
-      "Knockout format with 8-over matches.",
-      "Standard TechFest sports rules apply."
-    ],
-    googleFormUrl: "https://forms.gle/GSExBRPYAzxPeDxq6",
-    coordinators: [
-      { name: "Mayur Waghdhare", phone: "7218303907", role: "Sports Lead" },
-      { name: "Nayan Hon", phone: "9405026747", role: "Co-Lead" }
-    ],
-    featured: true,
-    badge: "HIGH PRIZE SPORTS"
-  },
-  {
-    id: "free-fire",
-    title: "Free Fire Esports Battle",
-    category: "Gaming & Esports",
-    icon: "🔥",
-    tagline: "Mobile Battle Royale Warfare",
-    description: "Squad battle in Free Fire! High-energy custom room matches to crown the top survival squad.",
-    prizePool: "₹3,000",
-    prizesBreakdown: [
-      { place: "1st Winner Squad", amount: "₹2,000" },
-      { place: "2nd Runner Up", amount: "₹1,000" }
-    ],
-    teamSize: "4 (Min) / 5 (Max)",
-    entryFee: "₹200 / team",
-    date: "6 August",
-    time: "02:00 PM Onwards",
-    venue: "IT Department",
-    tags: ["Free Fire", "Mobile Gaming", "Battle Royale"],
-    rules: [
-      "Mobile devices only. No emulators.",
-      "Point system based on placement and total kills."
-    ],
-    googleFormUrl: "https://forms.gle/GSExBRPYAzxPeDxq6",
-    coordinators: [
-      { name: "Prathmesh Pohankar", phone: "7666051383", role: "Esports Coordinator" }
-    ],
-    featured: false
-  },
-  {
-    id: "bgmi-championship",
-    title: "BGMI Championship",
-    category: "Gaming & Esports",
-    icon: "📱",
-    tagline: "Battlegrounds Mobile India Esports",
-    description: "Dominate the battlegrounds across online qualifiers on Aug 6 and intense LAN finals on Aug 7!",
-    prizePool: "₹5,000",
-    prizesBreakdown: [
-      { place: "1st Champion Squad", amount: "₹3,000" },
-      { place: "2nd Runner Up Squad", amount: "₹2,000" }
-    ],
-    teamSize: "4 - 5 Members",
-    entryFee: "₹50 / person",
-    date: "6 August (Online) & 7 August (LAN Finals)",
-    time: "11:00 AM Onwards",
-    venue: "IT Department",
-    tags: ["BGMI", "Esports", "Mobile Gaming", "LAN Finals"],
-    rules: [
-      "Strict mobile-only match regulations.",
-      "Top 16 squads from Aug 6 qualify for Aug 7 LAN finals."
-    ],
-    googleFormUrl: "https://forms.gle/GSExBRPYAzxPeDxq6",
-    coordinators: [
-      { name: "Parth Shirpurkar", phone: "9579346943", role: "Esports Lead" },
-      { name: "Samrudhha Belsare", phone: "9764955548", role: "Co-Lead" }
-    ],
-    featured: true,
-    badge: "ESPORTS FINALS"
   }
 ];
 

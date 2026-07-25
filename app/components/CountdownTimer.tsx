@@ -2,7 +2,7 @@
 
 import React, { useSyncExternalStore } from "react";
 
-const TARGET_DATE = new Date("2026-08-07T08:00:00Z").getTime();
+const TARGET_DATE = new Date("2026-08-08T08:00:00Z").getTime();
 
 const emptySubscribe = () => () => {};
 
@@ -27,7 +27,7 @@ function getServerSnapshot() {
   return 0;
 }
 
-const SERVER_FALLBACK = { days: 13, hours: 15, minutes: 42, seconds: 40 };
+const SERVER_FALLBACK = { days: 14, hours: 0, minutes: 0, seconds: 0 };
 
 function getTimeLeftFromSeconds(timestampSeconds: number) {
   if (timestampSeconds === 0) return SERVER_FALLBACK;
@@ -61,19 +61,19 @@ export default function CountdownTimer() {
   ];
 
   return (
-    <div className="w-full max-w-lg mt-6">
+    <div className="w-full max-w-xl mt-6">
       {/* Wood Plank Box */}
       <div
         className="relative rounded-2xl text-center overflow-hidden
-                   bg-[url('/images/timer.png')] bg-cover bg-center h-full w-full min-h-30 p-3 pr-3"
+                   bg-[url('/images/timer.png')] bg-cover bg-center h-full w-full min-h-30 p-4"
       >
         {/* Title Bar */}
         <div className="flex items-center justify-center gap-3 mb-4">
-          <span className="text-amber-400 text-sm">⤝</span>
+          <span className="text-amber-400 text-sm">⚡</span>
           <span className="font-pirate text-amber-300 text-sm sm:text-base tracking-widest font-bold uppercase drop-shadow-sm">
-            THE ADVENTURE BEGINS IN
+            8TH AUGUST 2026 • 12 HOURS INNOVATION VOYAGE
           </span>
-          <span className="text-amber-400 text-sm">⤞</span>
+          <span className="text-amber-400 text-sm">⚡</span>
         </div>
 
         {/* Counter Columns */}
