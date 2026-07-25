@@ -64,11 +64,11 @@ export default function BountyTracks({ onSelectTrack }: { onSelectTrack: (track:
   return (
     <section id="bounties" className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 scroll-mt-20">
       {/* Section Header */}
-      <div className="text-center max-w-3xl mx-auto mb-14">
+      <div className="text-center max-w-3xl mx-auto mb-14 w-full max-w-full">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-amber-500/40 bg-amber-500/10 text-amber-300 font-mono text-xs uppercase tracking-widest mb-4">
-          <span>🏴‍☠️</span> FIVE HIGH-SEAS CHALLENGES
+          FIVE HIGH-SEAS CHALLENGES
         </div>
-        <h2 className="font-pirate text-4xl sm:text-5xl md:text-6xl font-bold text-amber-300 drop-shadow-md">
+        <h2 className="font-pirate text-3xl sm:text-5xl md:text-6xl font-bold text-amber-300 drop-shadow-md leading-tight py-1 break-words">
           TREASURE BOUNTY TRACKS
         </h2>
         <p className="mt-3 text-amber-100/80 font-sans text-base sm:text-lg">

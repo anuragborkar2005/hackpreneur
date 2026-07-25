@@ -78,7 +78,7 @@ export default function PastEventsSection() {
   return (
     <section
       id="past-events"
-      className="relative isolate w-full min-h-screen flex flex-col justify-center overflow-hidden py-16 sm:py-24 scroll-mt-20"
+      className="relative isolate w-full min-h-screen flex flex-col justify-center overflow-visible py-16 sm:py-24 scroll-mt-20"
     >
       {/* about_bg.svg covering full section as background */}
       <div
@@ -90,7 +90,7 @@ export default function PastEventsSection() {
         <div className="absolute inset-0 bg-linear-to-b from-[#faf4e5] via-transparent to-[#faf4e5] -z-10" />
       </div>
 
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between min-h-[85vh] space-y-10">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-start sm:justify-between min-h-0 sm:min-h-[85vh] space-y-6 sm:space-y-10">
 
         {/* TOP HEADER & SIDE CARDS GRID MATCHING PAST_EVENTS.PNG */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start pt-2">
@@ -127,16 +127,16 @@ export default function PastEventsSection() {
             {/* Dark Wooden Scroll Ribbon */}
             <div className="inline-flex items-center gap-2 px-6 py-1.5 rounded-full border border-[#d4af37] bg-[#23160e] text-[#f4ecd8] font-pirate text-base sm:text-lg font-bold shadow-md mb-3">
               <Compass className="w-4 h-4 text-amber-400" />
-              <span>VOYAGES OF INNOVATION</span>
+              <span>VOYAGES & ACHIEVEMENTS</span>
               <Compass className="w-4 h-4 text-amber-400" />
             </div>
 
             {/* Headline */}
-            <div className="space-y-0.5">
-              <h2 className="font-pirate text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-wider text-[#2b1810] drop-shadow-sm leading-none">
+            <div className="space-y-0.5 max-w-full">
+              <h2 className="font-pirate text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-wider text-[#2b1810] drop-shadow-sm leading-tight py-1 break-words">
                 PAST EVENT
               </h2>
-              <h2 className="font-pirate text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-wider text-[#8c1d1a] drop-shadow-md leading-none">
+              <h2 className="font-pirate text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-wider text-[#8c1d1a] drop-shadow-md leading-tight py-1 break-words">
                 HIGHLIGHTS
               </h2>
             </div>
@@ -150,17 +150,17 @@ export default function PastEventsSection() {
 
             {/* Subtitle */}
             <p className="text-[#3d271d] font-sans font-semibold text-xs sm:text-sm tracking-wide max-w-lg mx-auto leading-relaxed">
-              Relive the adventure! Here&apo;s a glimpse of the epic journeys, groundbreaking ideas and unforgettable moments from our previous hackathons.
+              Relive the adventure! Here&apos;s a glimpse of the epic journeys, achievements, groundbreaking ideas, and unforgettable moments from our previous hackathons.
             </p>
           </div>
 
-          {/* TOP RIGHT: OUR LEGACY IN NUMBERS (WOODEN BOARD) */}
+          {/* TOP RIGHT: LEGACY & ACHIEVEMENTS IN NUMBERS (WOODEN BOARD) */}
           <div className="lg:col-span-3 flex justify-end">
             <div className="w-full p-4 rounded-2xl bg-linear-to-br from-[#26170e] via-[#1a0e08] to-[#120804] border-2 border-[#5c381e] text-white shadow-2xl relative">
               <div className="text-center border-b border-amber-900/50 pb-2 mb-3">
                 <span className="text-[11px] font-mono font-bold text-amber-300 uppercase tracking-wider flex items-center justify-center gap-1">
                   <Sparkles className="w-3 h-3 text-amber-400" />
-                  <span>OUR LEGACY IN NUMBERS</span>
+                  <span>LEGACY & ACHIEVEMENTS</span>
                   <Sparkles className="w-3 h-3 text-amber-400" />
                 </span>
               </div>
@@ -168,7 +168,7 @@ export default function PastEventsSection() {
               <div className="grid grid-cols-4 gap-1 text-center">
                 <div className="flex flex-col items-center">
                   <Users className="w-4 h-4 text-amber-400 mb-0.5" />
-                  <span className="font-pirate text-base text-center font-bold text-amber-300 block">2500+</span>
+                  <span className="font-pirate text-base text-center font-bold text-amber-300 block">3,500+</span>
                   <span className="text-[9px] font-mono text-amber-100/70 block uppercase">PARTICIPANTS</span>
                 </div>
                 <div className="flex flex-col items-center">
@@ -183,8 +183,8 @@ export default function PastEventsSection() {
                 </div>
                 <div className="flex flex-col items-center">
                   <Trophy className="w-4 h-4 text-amber-400 mb-0.5" />
-                  <span className="font-pirate text-base text-center font-bold text-amber-300 block">25+</span>
-                  <span className="text-[9px] font-mono text-amber-100/70 block uppercase">SPONSORS</span>
+                  <span className="font-pirate text-base text-center font-bold text-amber-300 block">₹40K+</span>
+                  <span className="text-[9px] font-mono text-amber-100/70 block uppercase">PRIZES</span>
                 </div>
               </div>
             </div>

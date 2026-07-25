@@ -95,7 +95,7 @@ export default function ScheduleSection() {
   return (
     <section
       id="schedule"
-      className="relative isolate w-full min-h-screen flex flex-col justify-center overflow-hidden py-16 sm:py-20 scroll-mt-20"
+      className="relative isolate w-full min-h-screen flex flex-col justify-center overflow-visible py-16 sm:py-20 scroll-mt-20"
     >
       {/* timeline.svg covering full section as background */}
       <div
@@ -107,10 +107,10 @@ export default function ScheduleSection() {
         <div className="absolute inset-0 bg-linear-to-b from-[#faf4e5] via-transparent to-[#faf4e5] -z-10" />
       </div>
 
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between min-h-[85vh]">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-start sm:justify-between min-h-0 sm:min-h-[85vh]">
         {/* SECTION HEADER MATCHING TIMELINE.PNG */}
-        <div className="text-center max-w-3xl mx-auto pt-4">
-          <h2 className="font-pirate text-5xl mt-15 sm:text-6xl md:text-7xl font-extrabold tracking-wider text-[#1e120d] drop-shadow-sm leading-none">
+        <div className="text-center max-w-3xl mx-auto pt-4 w-full max-w-full">
+          <h2 className="font-pirate text-4xl mt-15 sm:text-6xl md:text-7xl font-extrabold tracking-wider text-[#1e120d] drop-shadow-sm leading-tight py-1 break-words">
             TIMELINE
           </h2>
 
@@ -236,8 +236,7 @@ export default function ScheduleSection() {
           {/* Center Parchment Scroll Ribbon */}
           <div className="px-8 py-3 rounded-2xl bg-gradient-to-r from-[#ebdcb9] via-[#f5eacc] to-[#ebdcb9] border-2 border-[#c8a355] text-center shadow-lg max-w-xl">
             <div className="font-pirate text-base sm:text-lg font-bold text-[#1e120d] uppercase tracking-wider flex items-center justify-center gap-2">
-              <span className="text-xl">🏴‍☠️</span> GATHER YOUR CREW. TRUST YOUR
-              COMPASS.
+              GATHER YOUR CREW. TRUST YOUR COMPASS.
             </div>
             <div className="text-xs font-mono font-bold text-[#8b1e1b] tracking-widest mt-0.5 uppercase">
               ✶ THE{" "}

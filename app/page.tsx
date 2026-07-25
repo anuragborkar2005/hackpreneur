@@ -6,14 +6,13 @@ import CountdownTimer from "./components/CountdownTimer";
 import ScheduleSection from "./components/ScheduleSection";
 import FaqSection from "./components/FaqSection";
 import AboutSection from "./components/AboutSection";
-import AchievementsSection from "./components/AchievementsSection";
 import PastEventsSection from "./components/PastEventsSection";
 import OrganizersSection from "./components/OrganizersSection";
 import SponsorsSection from "./components/SponsorsSection";
 import FooterSection from "./components/FooterSection";
 import RegistrationModal from "./components/RegistrationModal";
 import AmbientAudio from "./components/AmbientAudio";
-import TechFestEventsSection from "./components/TechFestEventsSection";
+import { Anchor } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
@@ -26,10 +25,10 @@ export default function Home() {
     window.open("https://forms.gle/GSExBRPYAzxPeDxq6", "_blank", "noopener,noreferrer");
   };
 
-  const handleOpenTrackModal = (track: any) => {
-    setSelectedTrack(track.id);
-    handleOpenRegister();
-  };
+  // const handleOpenTrackModal = (track: any) => {
+  //   setSelectedTrack(track.id);
+  //   handleOpenRegister();
+  // };
 
   return (
     <div className="relative min-h-screen bg-[#faf4e5] text-[#1e120d] flex flex-col font-sans overflow-x-hidden selection:bg-amber-900/30 selection:text-amber-900">
@@ -74,14 +73,14 @@ export default function Home() {
               </div>
 
               {/* MAIN HEADLINE WITH PIRATE FONT */}
-              <div className="space-y-1">
-                <h1 className="font-pirate text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.02] text-[#1e120d] drop-shadow-sm">
+              <div className="space-y-1 max-w-full">
+                <h1 className="font-pirate text-4xl sm:text-6xl md:text-7xl font-bold leading-tight text-[#1e120d] drop-shadow-sm py-1 break-words">
                   SET SAIL.
                 </h1>
-                <h1 className="font-pirate text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.02] text-[#1e120d] drop-shadow-sm">
+                <h1 className="font-pirate text-4xl sm:text-6xl md:text-7xl font-bold leading-tight text-[#1e120d] drop-shadow-sm py-1 break-words">
                   BUILD THE FUTURE.
                 </h1>
-                <h1 className="font-pirate text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.02] text-[#8b1e1b] drop-shadow-sm">
+                <h1 className="font-pirate text-4xl sm:text-6xl md:text-7xl font-bold leading-tight text-[#8b1e1b] drop-shadow-sm py-1 break-words">
                   CONQUER LIMITS.
                 </h1>
               </div>
@@ -110,18 +109,17 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={handleOpenRegister}
-                  className="px-6 py-3.5 rounded-xl font-pirate text-xl text-white font-bold btn-crimson flex items-center gap-3 tracking-wider shadow-lg hover:scale-105 active:scale-95 transition-all cursor-pointer"
+                  className="px-6 py-3.5 rounded-xl font-pirate text-lg sm:text-xl text-white font-bold btn-crimson flex items-center gap-3 tracking-wider shadow-lg hover:scale-105 active:scale-95 transition-all cursor-pointer"
                 >
-                  <span className="text-4xl">🏴‍☠️</span>
+                  <Anchor className="w-5 h-5 text-white" />
                   <span>REGISTER NOW</span>
                 </a>
 
                 <a
                   href="#events"
-                  className="px-6 py-3.5 rounded-xl font-pirate text-lg text-[#1e120d] font-bold bg-[#e6d8b8] hover:bg-[#f3e5ab] border border-[#c8a355] shadow-md hover:scale-105 active:scale-95 transition-all cursor-pointer flex items-center gap-2"
+                  className="px-6 py-3.5 rounded-xl font-pirate text-base sm:text-lg text-[#1e120d] font-bold bg-[#e6d8b8] hover:bg-[#f3e5ab] border border-[#c8a355] shadow-md hover:scale-105 active:scale-95 transition-all cursor-pointer flex items-center gap-2"
                 >
                   <span>EXPLORE ALL EVENTS</span>
-                  <span>⚡</span>
                 </a>
               </div>
 
@@ -139,7 +137,7 @@ export default function Home() {
         {/* ========================================== */}
         {/* TECHFEST EVENTS ARENA SECTION               */}
         {/* ========================================== */}
-        <TechFestEventsSection />
+        {/*<TechFestEventsSection />*/}
 
         {/*<BlurSeparator />*/}
 
@@ -151,14 +149,7 @@ export default function Home() {
         {/*<BlurSeparator />*/}
 
         {/* ========================================== */}
-        {/* ACHIEVEMENTS SECTION                       */}
-        {/* ========================================== */}
-        <AchievementsSection />
-
-        {/*<BlurSeparator />*/}
-
-        {/* ========================================== */}
-        {/* PAST EVENTS SECTION                        */}
+        {/* PAST EVENTS & ACHIEVEMENTS SECTION          */}
         {/* ========================================== */}
         <PastEventsSection />
 

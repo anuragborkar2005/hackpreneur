@@ -10,23 +10,10 @@ import {
 } from "./PirateMotion";
 
 export default function SponsorsSection() {
-  const organizingPartners = [
-    {
-      name: "Qythera",
-      logo: "/sponsors/Qythera.jpg",
-      role: "Organizing Partner",
-    },
-    {
-      name: "GDG Cloud Nagpur",
-      logo: "/sponsors/GDG.png",
-      role: "Organizing Partner",
-    },
-  ];
-
   return (
     <section
       id="sponsors"
-      className="relative isolate w-full min-h-screen flex flex-col justify-center overflow-hidden py-16 sm:py-24 scroll-mt-20"
+      className="relative isolate w-full min-h-screen flex flex-col justify-center overflow-visible py-16 sm:py-24 scroll-mt-20"
     >
       {/* Pirate Background Overlay */}
       <div
@@ -50,15 +37,9 @@ export default function SponsorsSection() {
 
           {/* Main Title */}
           <div className="flex items-center justify-center gap-4">
-            <PirateSpinWheel className="text-[#8c1d1a] text-3xl font-pirate hidden sm:inline cursor-pointer">
-              ☸
-            </PirateSpinWheel>
-            <h2 className="font-pirate text-5xl sm:text-7xl md:text-8xl font-bold tracking-wider text-[#2b1810] drop-shadow-md">
-              ORGANIZING PARTNERS
+            <h2 className="font-pirate text-4xl sm:text-7xl md:text-8xl font-bold tracking-wider text-[#2b1810] drop-shadow-md leading-tight py-1 break-words">
+              OUR PARTNERS
             </h2>
-            <PirateSpinWheel className="text-[#8c1d1a] text-3xl font-pirate hidden sm:inline cursor-pointer">
-              ☸
-            </PirateSpinWheel>
           </div>
 
           {/* Anchor & Line Divider */}
@@ -71,55 +52,69 @@ export default function SponsorsSection() {
           {/* Subtitle */}
           <p className="text-[#3d271d] font-sans font-medium text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
             Behind every great voyage is a crew that believes in the mission.
-            We are proud to be supported by our esteemed organizing partners.
+            We are proud to be supported by our esteemed partners.
           </p>
         </PirateScrollReveal>
 
-        {/* ORGANIZING PARTNERS CONTAINER */}
-        <div className="flex flex-col items-center space-y-6 pt-4">
+        {/* SUBSECTION 1: COMMUNITY PARTNER */}
+        <div className="flex flex-col items-center space-y-4 pt-2">
           {/* Header Ribbon */}
-          <div className="bg-[#8c1d1a] text-[#fce8c3] px-8 py-2 rounded-lg font-pirate text-xl sm:text-2xl tracking-widest border border-[#d4af37]/60 shadow-md mb-2 flex items-center gap-3">
-            <span>👑</span>
-            <span>OFFICIAL ORGANIZING PARTNERS</span>
-            <span>👑</span>
+          <div className="bg-[#8c1d1a] text-[#fce8c3] px-4 sm:px-8 py-2 rounded-lg font-pirate text-base sm:text-2xl tracking-widest border border-[#d4af37]/60 shadow-md mb-2 flex items-center justify-center text-center w-full max-w-md">
+            <span className="text-center w-full">OFFICIAL COMMUNITY PARTNER</span>
           </div>
 
-          {/* Logo Grid for Organizing Partners */}
-          <div className="w-full max-w-3xl grid grid-cols-1 sm:grid-cols-2 gap-6 px-2 sm:px-4">
-            {organizingPartners.map((partner, index) => (
-              <PirateInteractiveCard
-                key={index}
-                delay={index * 0.1}
-                className="bg-white/95 backdrop-blur-xs border-2 border-[#d4af37] rounded-2xl p-6 shadow-lg hover:shadow-2xl flex flex-col items-center justify-center min-h-[170px] text-center group transition-all duration-300 relative overflow-hidden"
-              >
-                <div className="absolute top-2 right-2 px-3 py-0.5 bg-[#8c1d1a] text-[#fce8c3] text-[11px] font-pirate tracking-wider rounded-full shadow-xs">
-                  {partner.role}
-                </div>
-                <div className="relative w-full h-28 flex items-center justify-center mt-3">
-                  {partner.logo.startsWith("/") ? (
-                    <Image
-                      src={partner.logo}
-                      alt={partner.name}
-                      width={260}
-                      height={130}
-                      className="max-h-24 w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
-                    />
-                  ) : (
-                    <div className="flex flex-col items-center justify-center">
-                      <div className="w-16 h-16 rounded-2xl bg-white border-2 border-[#4285F4]/30 shadow-md flex items-center justify-center">
-                        <span className="text-3xl font-black text-[#4285F4]">GDG</span>
-                      </div>
-                      <span className="text-[11px] font-mono font-bold text-[#4285F4] uppercase tracking-wider mt-1">
-                        Google Developer Group
-                      </span>
-                    </div>
-                  )}
-                </div>
-                <span className="mt-2 text-[#2b1810] font-sans font-bold text-lg tracking-wide">
-                  {partner.name}
-                </span>
-              </PirateInteractiveCard>
-            ))}
+          {/* Logo Card */}
+          <div className="w-full max-w-md px-2 sm:px-4">
+            <PirateInteractiveCard
+              className="bg-white/95 backdrop-blur-xs border-2 border-[#d4af37] rounded-2xl p-6 shadow-lg hover:shadow-2xl flex flex-col items-center justify-center min-h-[170px] text-center group transition-all duration-300 relative overflow-hidden"
+            >
+              <div className="absolute top-2 right-2 px-3 py-0.5 bg-[#8c1d1a] text-[#fce8c3] text-[11px] font-pirate tracking-wider rounded-full shadow-xs">
+                Community Partner
+              </div>
+              <div className="relative w-full h-28 flex items-center justify-center mt-3">
+                <Image
+                  src="/sponsors/GDG.png"
+                  alt="GDG Cloud Nagpur"
+                  width={260}
+                  height={130}
+                  className="max-h-24 w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <span className="mt-2 text-[#2b1810] font-sans font-bold text-lg tracking-wide">
+                GDG Cloud Nagpur
+              </span>
+            </PirateInteractiveCard>
+          </div>
+        </div>
+
+        {/* SUBSECTION 2: ORGANIZING PARTNER */}
+        <div className="flex flex-col items-center space-y-4 pt-2">
+          {/* Header Ribbon */}
+          <div className="bg-[#8c1d1a] text-[#fce8c3] px-4 sm:px-8 py-2 rounded-lg font-pirate text-base sm:text-2xl tracking-widest border border-[#d4af37]/60 shadow-md mb-2 flex items-center justify-center text-center w-full max-w-md">
+            <span className="text-center w-full">OFFICIAL ORGANIZING PARTNER</span>
+          </div>
+
+          {/* Logo Card */}
+          <div className="w-full max-w-md px-2 sm:px-4">
+            <PirateInteractiveCard
+              className="bg-white/95 backdrop-blur-xs border-2 border-[#d4af37] rounded-2xl p-6 shadow-lg hover:shadow-2xl flex flex-col items-center justify-center min-h-[170px] text-center group transition-all duration-300 relative overflow-hidden"
+            >
+              <div className="absolute top-2 right-2 px-3 py-0.5 bg-[#8c1d1a] text-[#fce8c3] text-[11px] font-pirate tracking-wider rounded-full shadow-xs">
+                Organizing Partner
+              </div>
+              <div className="relative w-full h-28 flex items-center justify-center mt-3">
+                <Image
+                  src="/sponsors/Qythera.jpg"
+                  alt="Qythera"
+                  width={260}
+                  height={130}
+                  className="max-h-24 w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <span className="mt-2 text-[#2b1810] font-sans font-bold text-lg tracking-wide">
+                Qythera
+              </span>
+            </PirateInteractiveCard>
           </div>
         </div>
 

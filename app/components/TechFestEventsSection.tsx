@@ -32,7 +32,7 @@ export const TECHFEST_EVENTS: TechEvent[] = [
     category: "Hackathons",
     icon: "🏴‍☠️",
     tagline: "1’st International Innovation Hackathon | Presented by Itechroots 16.0",
-    description: "Spend less time. Win big.⚡️ Seize the opportunity! The premier 12-hour hybrid hackathon hosted at IT Department, YCCE in collaboration with GDG Cloud Nagpur.",
+    description: "Spend less time. Win big. Seize the opportunity! The premier 12-hour hybrid hackathon hosted at IT Department, YCCE in collaboration with GDG Cloud Nagpur.",
     prizePool: "₹41,000 Total",
     prizesBreakdown: [
       { place: "🥇 1st Winner", amount: "₹21,000 Cash Prize" },
@@ -46,7 +46,7 @@ export const TECHFEST_EVENTS: TechEvent[] = [
     venue: "Hybrid Mode | IT Department, YCCE",
     tags: ["Hackathon", "Innovation", "GDG Cloud", "Hybrid", "Startups"],
     rules: [
-      "Spend less time. Win big.⚡️ 12 Hours duration on 8th August 2026.",
+      "Spend less time. Win big. 12 Hours duration on 8th August 2026.",
       "Teams must consist of 4 to 6 members with registration fee of ₹600/team.",
       "Hybrid mode allows both online and offline participation at IT Department, YCCE.",
       "Partner: GDG Cloud Nagpur."
@@ -653,7 +653,7 @@ export default function TechFestEventsSection() {
             {/* Event Rules */}
             <div className="mb-6">
               <h4 className="font-pirate text-lg text-amber-300 mb-2 flex items-center gap-2">
-                <span>⚖️</span> RULES & GUIDELINES
+                RULES & GUIDELINES
               </h4>
               <ul className="space-y-1.5 text-xs text-[#c4b396] font-sans list-disc list-inside">
                 {activeModalEvent.rules.map((rule, idx) => (

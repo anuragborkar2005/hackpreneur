@@ -94,7 +94,7 @@ export default function AchievementsSection() {
   return (
     <section
       id="achievements"
-      className="relative isolate w-full min-h-screen flex flex-col justify-center overflow-hidden py-16 sm:py-24 scroll-mt-20"
+      className="relative isolate w-full min-h-screen flex flex-col justify-center overflow-visible py-16 sm:py-24 scroll-mt-20"
     >
       {/* achivements-bg.svg covering full section as background */}
       <div
@@ -106,10 +106,10 @@ export default function AchievementsSection() {
         <div className="absolute inset-0 bg-linear-to-b from-[#faf4e5] via-transparent to-[#faf4e5] -z-10" />
       </div>
 
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between min-h-[85vh] space-y-10">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-start sm:justify-between min-h-0 sm:min-h-[85vh] space-y-6 sm:space-y-10">
 
         {/* SECTION HEADER MATCHING ACHIEVEMENTS.PNG */}
-        <div className="text-center max-w-3xl mx-auto pt-2">
+        <div className="text-center max-w-3xl mx-auto pt-2 w-full ">
           {/* Top Crimson Banner Ribbon */}
           <div className="inline-flex items-center gap-2 px-6 py-1.5 rounded-full border border-[#d4af37] bg-[#8c1d1a] text-white font-pirate text-base sm:text-lg font-bold shadow-md mb-3">
             <Swords className="w-4 h-4 text-amber-300" />
@@ -118,11 +118,11 @@ export default function AchievementsSection() {
           </div>
 
           {/* Headline */}
-          <div className="space-y-0.5">
-            <h2 className="font-pirate text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-wider text-[#2b1810] drop-shadow-sm leading-none">
+          <div className="space-y-0.5 max-w-full">
+            <h2 className="font-pirate text-3xl sm:text-6xl md:text-7xl font-extrabold tracking-wider text-[#2b1810] drop-shadow-sm leading-tight py-1 break-words">
               OUR VOYAGE.
             </h2>
-            <h2 className="font-pirate text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-wider text-[#8c1d1a] drop-shadow-md leading-none">
+            <h2 className="font-pirate text-3xl sm:text-6xl md:text-7xl font-extrabold tracking-wider text-[#8c1d1a] drop-shadow-md leading-tight py-1 break-words">
               OUR ACHIEVEMENTS.
             </h2>
           </div>

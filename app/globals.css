@@ -9,7 +9,10 @@
 
 .font-pirate {
   font-family: var(--font-pirate-local), Georgia, serif;
-  /*letter-spacing: 0.04em;*/
+  line-height: 1.2;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  max-width: 100%;
 }
 
 .font-cinzel {

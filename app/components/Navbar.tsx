@@ -172,7 +172,6 @@ export default function Navbar({
             className="w-full py-3 mt-2 rounded-lg font-pirate text-lg text-white font-bold btn-crimson text-center flex items-center justify-center gap-2 cursor-pointer"
           >
             <span>REGISTER NOW</span>
-            <span>⚓</span>
           </a>
         </div>
       )}

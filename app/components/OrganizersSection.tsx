@@ -7,7 +7,6 @@ import {
   Lightbulb,
   Compass,
   Package,
-  Code,
 } from "lucide-react";
 import {
   PirateScrollReveal,
@@ -33,7 +32,7 @@ export default function OrganizersSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col space-y-12">
         {/* SECTION HEADER */}
         <PirateScrollReveal className="text-center space-y-3">
-          <h2 className="font-pirate text-6xl sm:text-7xl md:text-8xl font-bold tracking-wider text-[#2b1810] drop-shadow-md">
+          <h2 className="font-pirate text-4xl sm:text-7xl md:text-8xl font-bold tracking-wider text-[#2b1810] drop-shadow-md leading-tight py-1 break-words">
             ORGANIZERS
           </h2>
 
@@ -64,9 +63,7 @@ export default function OrganizersSection() {
           <div className="lg:col-span-12 bg-[#f6ebd4] border-2 border-[#b89562] rounded-2xl p-6 shadow-xl relative flex flex-col justify-between overflow-hidden max-w-2xl mx-auto w-full">
             {/* Header Banner */}
             <div className="w-full bg-[#3a2012] text-[#fce8c3] py-2 px-3 rounded-lg text-center font-pirate text-xl tracking-wider font-bold mb-6 flex items-center justify-center gap-2 border border-[#8c5a2b]">
-              <span>👑</span>
               <span>PRESIDENT CSI</span>
-              <span>👑</span>
             </div>
 
             {/* Member */}
@@ -89,20 +86,13 @@ export default function OrganizersSection() {
                 President • Computer Society of India
               </span>
             </div>
-
-            {/* Accent Divider */}
-            <div className="flex justify-center text-[#8c1d1a] text-sm pt-2">
-              <span>⚓</span>
-            </div>
           </div>
 
           {/* 2. ORGANIZERS & HELPLINE (Col 6 on lg) */}
           <div className="lg:col-span-6 bg-[#f6ebd4] border-2 border-[#b89562] rounded-2xl p-5 shadow-xl relative flex flex-col justify-between overflow-hidden">
             {/* Header Banner */}
             <div className="w-full bg-[#3a2012] text-[#fce8c3] py-2 px-3 rounded-lg text-center font-pirate text-lg tracking-wider font-bold mb-6 flex items-center justify-center gap-2 border border-[#8c5a2b]">
-              <span>⚔</span>
               <span>ORGANIZERS & HELPLINE</span>
-              <span>⚔</span>
             </div>
 
             {/* Members */}
@@ -130,7 +120,7 @@ export default function OrganizersSection() {
                   href="tel:9403315952"
                   className="mt-2 px-3 py-1 bg-[#8c1d1a] text-[#fce8c3] text-xs font-mono font-bold rounded-lg shadow-xs hover:bg-[#a81c19] transition-colors flex items-center gap-1"
                 >
-                  📞 9403315952
+                  9403315952
                 </a>
               </div>
 
@@ -157,27 +147,22 @@ export default function OrganizersSection() {
                   href="tel:8856012282"
                   className="mt-2 px-3 py-1 bg-[#8c1d1a] text-[#fce8c3] text-xs font-mono font-bold rounded-lg shadow-xs hover:bg-[#a81c19] transition-colors flex items-center gap-1"
                 >
-                  📞 8856012282
+                  8856012282
                 </a>
               </div>
             </div>
-
-            {/* Accent Divider */}
-            <div className="flex justify-center text-[#8c1d1a] text-xs pt-2">
-              <span>☸</span>
-            </div>
           </div>
 
-          {/* 4. TECHNICAL HEADS (Col 6 on lg) */}
+          {/* 4. TECHNICAL TEAM (Col 6 on lg) */}
           <div className="lg:col-span-6 bg-[#f6ebd4] border-2 border-[#b89562] rounded-2xl p-5 shadow-xl relative flex flex-col justify-between overflow-hidden">
             {/* Header Banner */}
             <div className="w-full bg-[#3a2012] text-[#fce8c3] py-2 px-3 rounded-lg text-center font-pirate text-lg tracking-wider font-bold mb-6 flex items-center justify-center gap-2 border border-[#8c5a2b]">
               <span>&lt;/&gt;</span>
-              <span>TECHNICAL HEADS</span>
+              <span>TECHNICAL TEAM</span>
             </div>
 
             {/* Members */}
-            <div className="grid grid-cols-2 gap-4 mb-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
               {/* Anurag Borkar */}
               <div className="flex flex-col items-center text-center">
                 <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full p-1 bg-gradient-to-b from-[#d4af37] via-[#8c5a2b] to-[#3a2012] shadow-md mb-2">
@@ -195,7 +180,7 @@ export default function OrganizersSection() {
                   Anurag Borkar
                 </h4>
                 <p className="text-xs text-[#8c1d1a] font-sans font-semibold mt-0.5">
-                  Technical Head
+                  Technical Team
                 </p>
               </div>
 
@@ -216,77 +201,14 @@ export default function OrganizersSection() {
                   Khushal Sharma
                 </h4>
                 <p className="text-xs text-[#8c1d1a] font-sans font-semibold mt-0.5">
-                  Technical Head
+                  Technical Team
                 </p>
-              </div>
-            </div>
-
-            {/* Accent Divider */}
-            <div className="flex justify-center text-[#8c1d1a] text-sm pt-2">
-              <span>⚓</span>
-            </div>
-          </div>
-
-          {/* 5. DEVELOPED BY (Col 12 - Full Width Special Parchment Card) */}
-          <div className="lg:col-span-12 bg-linear-to-b from-[#281810] via-[#1f120b] to-[#281810] border-2 border-[#d4af37]/80 rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden text-[#fce8c3]">
-            {/* Glow accent */}
-            <div className="absolute -top-24 -left-24 w-48 h-48 bg-[#d4af37]/10 rounded-full blur-3xl" />
-            <div className="absolute -bottom-24 -right-24 w-48 h-48 bg-[#8c1d1a]/20 rounded-full blur-3xl" />
-
-            {/* Header Banner */}
-            <div className="text-center mb-6 relative">
-              <div className="inline-flex items-center justify-center px-6 py-2 rounded-xl bg-[#3a2012] border border-[#d4af37]/60 text-[#ffd700] font-pirate text-2xl tracking-widest shadow-md gap-3">
-                <Code className="w-6 h-6 text-[#ffd700]" />
-                <span>DEVELOPED BY</span>
-                <Code className="w-6 h-6 text-[#ffd700]" />
-              </div>
-              <p className="text-xs text-amber-200/70 font-sans mt-2">
-                The Architects & Engineers Behind the Hackpreneur Digital Experience
-              </p>
-            </div>
-
-            {/* 3 Developers */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              {/* Anurag Borkar */}
-              <div className="flex flex-col items-center text-center p-4 rounded-xl bg-[#352015]/80 border border-[#d4af37]/30 hover:border-[#d4af37] transition-colors shadow-inner">
-                <div className="relative w-22 h-22 sm:w-24 sm:h-24 rounded-full p-1 bg-gradient-to-b from-[#ffd700] via-[#d4af37] to-[#8c5a2b] shadow-lg mb-3">
-                  <div className="w-full h-full rounded-full overflow-hidden relative border-2 border-[#281810]">
-                    <Image
-                      src="/organisers/AnuragBorkar.jpg"
-                      alt="Anurag Borkar"
-                      fill
-                      sizes="96px"
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-                <h4 className="font-serif font-bold text-lg text-[#ffd700] leading-tight">
-                  Anurag Borkar
-                </h4>
-              </div>
-
-              {/* Khushal Sharma */}
-              <div className="flex flex-col items-center text-center p-4 rounded-xl bg-[#352015]/80 border border-[#d4af37]/30 hover:border-[#d4af37] transition-colors shadow-inner">
-                <div className="relative w-22 h-22 sm:w-24 sm:h-24 rounded-full p-1 bg-gradient-to-b from-[#ffd700] via-[#d4af37] to-[#8c5a2b] shadow-lg mb-3">
-                  <div className="w-full h-full rounded-full overflow-hidden relative border-2 border-[#281810]">
-                    <Image
-                      src="/organisers/Khushal_Sharma.jpeg"
-                      alt="Khushal Sharma"
-                      fill
-                      sizes="96px"
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-                <h4 className="font-serif font-bold text-lg text-[#ffd700] leading-tight">
-                  Khushal Sharma
-                </h4>
               </div>
 
               {/* Dhairya Deulkar */}
-              <div className="flex flex-col items-center text-center p-4 rounded-xl bg-[#352015]/80 border border-[#d4af37]/30 hover:border-[#d4af37] transition-colors shadow-inner">
-                <div className="relative w-22 h-22 sm:w-24 sm:h-24 rounded-full p-1 bg-gradient-to-b from-[#ffd700] via-[#d4af37] to-[#8c5a2b] shadow-lg mb-3">
-                  <div className="w-full h-full rounded-full overflow-hidden relative border-2 border-[#281810]">
+              <div className="flex flex-col items-center text-center">
+                <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full p-1 bg-gradient-to-b from-[#d4af37] via-[#8c5a2b] to-[#3a2012] shadow-md mb-2">
+                  <div className="w-full h-full rounded-full overflow-hidden relative border-2 border-[#f6ebd4]">
                     <Image
                       src="/organisers/Dhairya_Deulkar.jpeg"
                       alt="Dhairya Deulkar"
@@ -296,9 +218,12 @@ export default function OrganizersSection() {
                     />
                   </div>
                 </div>
-                <h4 className="font-serif font-bold text-lg text-[#ffd700] leading-tight">
+                <h4 className="font-serif font-bold text-base text-[#2b1810] leading-tight">
                   Dhairya Deulkar
                 </h4>
+                <p className="text-xs text-[#8c1d1a] font-sans font-semibold mt-0.5">
+                  Technical Team
+                </p>
               </div>
             </div>
           </div>

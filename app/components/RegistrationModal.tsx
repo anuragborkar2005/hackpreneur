@@ -132,11 +132,11 @@ export default function RegistrationModal({ isOpen, onClose, selectedTrack }: Re
                   onChange={(e) => setFormData({ ...formData, track: e.target.value })}
                   className="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-amber-500/30 text-gray-100 focus:outline-none focus:border-amber-400 font-mono text-sm"
                 >
-                  <option value="ai-captains">🤖 AI Captains & Autonomous Agents ($40k)</option>
-                  <option value="web3-booty">🪙 Web3 & Decentralized Booty ($35k)</option>
-                  <option value="cyber-defense">🛡️ Cyber Defense & Zero-Day Galleons ($30k)</option>
-                  <option value="open-ocean">🌊 Open Ocean Hack - Wildcard ($25k)</option>
-                  <option value="virtual-realms">🎮 Virtual Realms & Spatial Computing ($20k)</option>
+                  <option value="ai-captains">AI Captains & Autonomous Agents ($40k)</option>
+                  <option value="web3-booty">Web3 & Decentralized Booty ($35k)</option>
+                  <option value="cyber-defense">Cyber Defense & Zero-Day Galleons ($30k)</option>
+                  <option value="open-ocean">Open Ocean Hack - Wildcard ($25k)</option>
+                  <option value="virtual-realms">Virtual Realms & Spatial Computing ($20k)</option>
                 </select>
               </div>
 

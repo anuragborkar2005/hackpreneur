@@ -34,11 +34,11 @@ export default function FaqSection() {
 
   return (
     <section id="faq" className="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 scroll-mt-20">
-      <div className="text-center mb-12">
+      <div className="text-center mb-12 w-full max-w-full">
         <div className="inline-flex items-center gap-2 px-6 py-1.5 rounded-full border border-[#d4af37] bg-[#23160e] text-[#f4ecd8] font-pirate text-base font-bold shadow-md mb-3">
-          <span>⚓</span> CAPTAIN&apos;S LOG & ANSWERS <span>⚓</span>
+          CAPTAIN&apos;S LOG & ANSWERS
         </div>
-        <h2 className="font-pirate text-4xl sm:text-5xl font-extrabold text-[#8c1d1a] drop-shadow-sm">
+        <h2 className="font-pirate text-3xl sm:text-5xl font-extrabold text-[#8c1d1a] drop-shadow-sm leading-tight py-1 break-words">
           FREQUENTLY ASKED QUESTIONS
         </h2>
       </div>
@@ -54,7 +54,7 @@ export default function FaqSection() {
               className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-pirate text-xl text-[#1e120d] font-bold hover:text-[#8b1e1b] transition-colors"
             >
               <span className="flex items-center gap-3">
-                <span className="text-[#8b1e1b] text-base">⚓</span> {faq.q}
+                {faq.q}
               </span>
               <span className="font-mono text-[#8b1e1b] text-2xl font-bold">
                 {openIdx === idx ? "−" : "+"}
