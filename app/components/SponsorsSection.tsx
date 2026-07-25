@@ -10,22 +10,16 @@ import {
 } from "./PirateMotion";
 
 export default function SponsorsSection() {
-  const sponsors = [
-    {
-      name: "IDP",
-      logo: "/sponsors/IDP.jpg",
-    },
+  const organizingPartners = [
     {
       name: "Qythera",
       logo: "/sponsors/Qythera.jpg",
+      role: "Organizing Partner",
     },
     {
-      name: "Runbhumi",
-      logo: "/sponsors/Runbhumi.jpg",
-    },
-    {
-      name: "Saonerwala",
-      logo: "/sponsors/Saonerwala.jpeg",
+      name: "GFG (GeeksforGeeks)",
+      logo: "/sponsors/GFG.jpg",
+      role: "Organizing Partner",
     },
   ];
 
@@ -43,7 +37,7 @@ export default function SponsorsSection() {
         <div className="absolute inset-0 bg-linear-to-b from-[#faf4e5] via-transparent to-[#faf4e5] -z-10" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col space-y-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col space-y-12">
         
         {/* HEADER SECTION */}
         <PirateScrollReveal className="text-center space-y-3">
@@ -59,8 +53,8 @@ export default function SponsorsSection() {
             <PirateSpinWheel className="text-[#8c1d1a] text-3xl font-pirate hidden sm:inline cursor-pointer">
               ☸
             </PirateSpinWheel>
-            <h2 className="font-pirate text-6xl sm:text-7xl md:text-8xl font-bold tracking-wider text-[#2b1810] drop-shadow-md">
-              OUR SPONSORS
+            <h2 className="font-pirate text-5xl sm:text-7xl md:text-8xl font-bold tracking-wider text-[#2b1810] drop-shadow-md">
+              ORGANIZING PARTNERS
             </h2>
             <PirateSpinWheel className="text-[#8c1d1a] text-3xl font-pirate hidden sm:inline cursor-pointer">
               ☸
@@ -77,38 +71,41 @@ export default function SponsorsSection() {
           {/* Subtitle */}
           <p className="text-[#3d271d] font-sans font-medium text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
             Behind every great voyage is a crew that believes in the mission.
-            We are proud to be supported by amazing partners and sponsors.
+            We are proud to be supported by our esteemed organizing partners.
           </p>
         </PirateScrollReveal>
 
-        {/* SPONSORS CONTAINER */}
+        {/* ORGANIZING PARTNERS CONTAINER */}
         <div className="flex flex-col items-center space-y-6">
           {/* Header Ribbon */}
           <div className="bg-[#8c1d1a] text-[#fce8c3] px-8 py-2 rounded-lg font-pirate text-xl sm:text-2xl tracking-widest border border-[#d4af37]/60 shadow-md mb-2 flex items-center gap-3">
-            <span>✦</span>
-            <span>OFFICIAL SPONSORS</span>
-            <span>✦</span>
+            <span>👑</span>
+            <span>OFFICIAL ORGANIZING PARTNERS</span>
+            <span>👑</span>
           </div>
 
-          {/* Logo Grid */}
-          <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-2 sm:px-4">
-            {sponsors.map((sponsor, index) => (
+          {/* Logo Grid for Organizing Partners */}
+          <div className="w-full max-w-3xl grid grid-cols-1 sm:grid-cols-2 gap-6 px-2 sm:px-4">
+            {organizingPartners.map((partner, index) => (
               <PirateInteractiveCard
                 key={index}
-                delay={index * 0.08}
-                className="bg-white/95 backdrop-blur-xs border-2 border-[#b89562] rounded-2xl p-6 shadow-md hover:shadow-xl flex flex-col items-center justify-center min-h-[150px] text-center group transition-all duration-300"
+                delay={index * 0.1}
+                className="bg-white/95 backdrop-blur-xs border-2 border-[#d4af37] rounded-2xl p-6 shadow-lg hover:shadow-2xl flex flex-col items-center justify-center min-h-[170px] text-center group transition-all duration-300 relative overflow-hidden"
               >
-                <div className="relative w-full h-24 flex items-center justify-center">
+                <div className="absolute top-2 right-2 px-3 py-0.5 bg-[#8c1d1a] text-[#fce8c3] text-[11px] font-pirate tracking-wider rounded-full shadow-xs">
+                  Organizing Partner
+                </div>
+                <div className="relative w-full h-28 flex items-center justify-center mt-3">
                   <Image
-                    src={sponsor.logo}
-                    alt={sponsor.name}
-                    width={240}
-                    height={120}
-                    className="max-h-20 w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                    src={partner.logo}
+                    alt={partner.name}
+                    width={260}
+                    height={130}
+                    className="max-h-24 w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
-                <span className="mt-3 text-[#2b1810] font-sans font-bold text-base tracking-wide">
-                  {sponsor.name}
+                <span className="mt-3 text-[#2b1810] font-sans font-bold text-lg tracking-wide">
+                  {partner.name}
                 </span>
               </PirateInteractiveCard>
             ))}

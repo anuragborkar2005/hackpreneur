@@ -7,9 +7,7 @@ import {
   Lightbulb,
   Compass,
   Package,
-  Shield,
   Code,
-  Award,
 } from "lucide-react";
 import {
   PirateScrollReveal,
@@ -292,13 +290,60 @@ export default function OrganizersSection() {
             </div>
           </div>
 
+          {/* ORGANIZING PARTNERS (Col 12) */}
+          <div className="lg:col-span-12 bg-[#f6ebd4] border-2 border-[#d4af37] rounded-2xl p-6 shadow-xl relative flex flex-col justify-between overflow-hidden">
+            {/* Header Banner */}
+            <div className="w-full bg-[#8c1d1a] text-[#fce8c3] py-2 px-4 rounded-lg text-center font-pirate text-xl tracking-wider font-bold mb-6 flex items-center justify-center gap-2 border border-[#d4af37]/60 shadow-md">
+              <span>👑</span>
+              <span>ORGANIZING PARTNERS</span>
+              <span>👑</span>
+            </div>
+
+            {/* Organizing Partner Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto w-full">
+              {/* Qythera */}
+              <div className="flex flex-col items-center p-5 rounded-xl bg-[#ede2c8]/80 border border-[#d4af37] shadow-md hover:shadow-xl transition-all text-center group">
+                <div className="relative w-full h-24 flex items-center justify-center mb-2">
+                  <Image
+                    src="/sponsors/Qythera.jpg"
+                    alt="Qythera"
+                    width={220}
+                    height={110}
+                    className="max-h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <h4 className="font-serif font-bold text-lg text-[#2b1810]">Qythera</h4>
+                <span className="inline-block mt-1.5 px-3 py-0.5 bg-[#8c1d1a] text-[#fce8c3] text-xs font-pirate tracking-wider rounded-full shadow-xs">
+                  Organizing Partner
+                </span>
+              </div>
+
+              {/* GFG */}
+              <div className="flex flex-col items-center p-5 rounded-xl bg-[#ede2c8]/80 border border-[#d4af37] shadow-md hover:shadow-xl transition-all text-center group">
+                <div className="relative w-full h-24 flex items-center justify-center mb-2">
+                  <Image
+                    src="/sponsors/GFG.jpg"
+                    alt="GeeksforGeeks"
+                    width={220}
+                    height={110}
+                    className="max-h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <h4 className="font-serif font-bold text-lg text-[#2b1810]">GeeksforGeeks (GFG)</h4>
+                <span className="inline-block mt-1.5 px-3 py-0.5 bg-[#8c1d1a] text-[#fce8c3] text-xs font-pirate tracking-wider rounded-full shadow-xs">
+                  Organizing Partner
+                </span>
+              </div>
+            </div>
+          </div>
+
         </div>
 
-        {/* BOTTOM ROW: ADVISORY BOARD & IN COLLABORATION WITH */}
+        {/* BOTTOM ROW: ADVISORY BOARD */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
 
           {/* ADVISORY BOARD (Dark Wood Plank Card) */}
-          <div className="lg:col-span-5 bg-[#23150d] border-2 border-[#d4af37]/70 rounded-2xl p-6 shadow-2xl relative flex flex-col justify-between text-[#fce8c3] overflow-hidden">
+          <div className="lg:col-span-12 bg-[#23150d] border-2 border-[#d4af37]/70 rounded-2xl p-6 shadow-2xl relative flex flex-col justify-between text-[#fce8c3] overflow-hidden">
             {/* Header Banner */}
             <div className="text-center font-pirate text-2xl tracking-widest text-[#ffd700] mb-6 flex items-center justify-center gap-2 drop-shadow-sm">
               <span>★</span>
@@ -354,76 +399,6 @@ export default function OrganizersSection() {
                 <p className="text-[11px] text-amber-100/70 font-sans mt-1 leading-snug">
                   Supporting the vision and mission
                 </p>
-              </div>
-            </div>
-          </div>
-
-          {/* IN COLLABORATION WITH (Parchment Card) */}
-          <div className="lg:col-span-7 bg-[#f6ebd4] border-2 border-[#b89562] rounded-2xl p-6 shadow-xl relative flex flex-col justify-between overflow-hidden">
-            {/* Header Ribbon */}
-            <div className="w-full bg-[#3a2012] text-[#fce8c3] py-2 px-4 rounded-lg text-center font-pirate text-xl tracking-wider font-bold mb-6 flex items-center justify-center gap-2 border border-[#8c5a2b]">
-              <span>☠</span>
-              <span>IN COLLABORATION WITH</span>
-              <span>☠</span>
-            </div>
-
-            {/* 5 Collaborator Logos/Badges */}
-            <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 items-center text-center">
-              {/* Computer Society */}
-              <div className="flex flex-col items-center p-2 rounded-xl bg-[#ede2c8]/60 border border-[#d8c098]">
-                <div className="w-10 h-10 rounded-lg bg-[#3a2012] text-[#3b82f6] flex items-center justify-center mb-1.5 shadow-sm">
-                  <Shield className="w-5 h-5" />
-                </div>
-                <h6 className="font-sans font-bold text-xs text-[#2b1810] leading-tight">
-                  Computer Society
-                </h6>
-                <span className="text-[10px] text-[#7c5634] font-medium">IT Department</span>
-              </div>
-
-              {/* Coding Club */}
-              <div className="flex flex-col items-center p-2 rounded-xl bg-[#ede2c8]/60 border border-[#d8c098]">
-                <div className="w-10 h-10 rounded-lg bg-[#3a2012] text-[#10b981] flex items-center justify-center mb-1.5 shadow-sm font-mono font-bold text-base">
-                  {"{ / }"}
-                </div>
-                <h6 className="font-sans font-bold text-xs text-[#2b1810] leading-tight">
-                  Coding Club
-                </h6>
-                <span className="text-[10px] text-[#7c5634] font-medium">YCCE</span>
-              </div>
-
-              {/* Developer Student Clubs */}
-              <div className="flex flex-col items-center p-2 rounded-xl bg-[#ede2c8]/60 border border-[#d8c098]">
-                <div className="w-10 h-10 rounded-lg bg-[#3a2012] flex items-center justify-center mb-1.5 shadow-sm gap-0.5">
-                  <span className="w-2 h-2 rounded-full bg-red-500" />
-                  <span className="w-2 h-2 rounded-full bg-blue-500" />
-                  <span className="w-2 h-2 rounded-full bg-green-500" />
-                </div>
-                <h6 className="font-sans font-bold text-xs text-[#2b1810] leading-tight">
-                  Developer Student Clubs
-                </h6>
-                <span className="text-[10px] text-[#7c5634] font-medium">GDSC</span>
-              </div>
-
-              {/* Institution's Innovation Council */}
-              <div className="flex flex-col items-center p-2 rounded-xl bg-[#ede2c8]/60 border border-[#d8c098]">
-                <div className="w-10 h-10 rounded-lg bg-[#3a2012] text-[#f59e0b] flex items-center justify-center mb-1.5 shadow-sm">
-                  <Award className="w-5 h-5" />
-                </div>
-                <h6 className="font-sans font-bold text-xs text-[#2b1810] leading-tight">
-                  Institution's Innovation Council
-                </h6>
-                <span className="text-[10px] text-[#7c5634] font-medium">IIC</span>
-              </div>
-
-              {/* Student Branch IEEE */}
-              <div className="flex flex-col items-center p-2 rounded-xl bg-[#ede2c8]/60 border border-[#d8c098] col-span-2 sm:col-span-1">
-                <div className="w-10 h-10 rounded-lg bg-[#3a2012] text-[#0284c7] flex items-center justify-center mb-1.5 shadow-sm font-bold text-xs font-serif">
-                  IEEE
-                </div>
-                <h6 className="font-sans font-bold text-xs text-[#2b1810] leading-tight">
-                  Student Branch
-                </h6>
-                <span className="text-[10px] text-[#7c5634] font-medium">IEEE YCCE</span>
               </div>
             </div>
           </div>
