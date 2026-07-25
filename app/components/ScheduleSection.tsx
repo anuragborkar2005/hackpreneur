@@ -234,7 +234,7 @@ export default function ScheduleSection() {
           </div>
 
           {/* Center Parchment Scroll Ribbon */}
-          <div className="px-8 py-3 rounded-2xl bg-gradient-to-r from-[#ebdcb9] via-[#f5eacc] to-[#ebdcb9] border-2 border-[#c8a355] text-center shadow-lg max-w-xl">
+          <div className="w-full px-4 sm:px-8 py-3 rounded-2xl bg-gradient-to-r from-[#ebdcb9] via-[#f5eacc] to-[#ebdcb9] border-2 border-[#c8a355] text-center shadow-lg max-w-xl">
             <div className="font-pirate text-base sm:text-lg font-bold text-[#1e120d] uppercase tracking-wider flex items-center justify-center gap-2">
               GATHER YOUR CREW. TRUST YOUR COMPASS.
             </div>

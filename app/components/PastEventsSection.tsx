@@ -238,7 +238,7 @@ export default function PastEventsSection() {
 
           {/* Right: Parchment Scroll Quote Banner (4 cols) */}
           <div
-            className="lg:col-span-4 w-md px-8 py-5 rounded-2xl overflow relative flex items-center gap-3 bg-cover bg-full  bg-center bg-no-repeat"
+            className="lg:col-span-4 w-full max-w-md px-6 sm:px-8 py-5 rounded-2xl overflow-hidden relative flex items-center gap-3 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: "url('/parchment_paper_landscape.png')" }}
           >
             <Quote className="w-8 h-8 text-[#8c1d1a] shrink-0 rotate-180" />
