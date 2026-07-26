@@ -2,7 +2,24 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight, Maximize2, X, Sparkles } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Maximize2,
+  X,
+  Sparkles,
+  Download,
+  Calendar,
+  MapPin,
+  Users,
+  Star,
+  Trophy,
+  Award,
+  Gift,
+  Phone,
+  Anchor,
+  Zap,
+} from "lucide-react";
 
 interface PosterSlide {
   id: string;
@@ -108,10 +125,31 @@ export default function FooterSection({ onOpenRegister }: { onOpenRegister: () =
           </div>
         </div>
 
-        <p className="max-w-xl text-amber-100/80 font-sans text-sm mb-4">
-          📅 8th August 2026 | 12 Hours • 📍 Hybrid Mode | IT Department, YCCE<br />
-          👥 Teams of 4-6 | ₹600/team • 🌟 Partner: GDG Cloud Nagpur
-        </p>
+        {/* Event info details with icons */}
+        <div className="max-w-2xl text-amber-100/80 font-sans text-sm mb-6 flex flex-col items-center gap-2">
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1">
+            <span className="inline-flex items-center gap-1.5">
+              <Calendar className="w-4 h-4 text-amber-400" />
+              <span>8th August 2026 | 12 Hours</span>
+            </span>
+            <span>•</span>
+            <span className="inline-flex items-center gap-1.5">
+              <MapPin className="w-4 h-4 text-amber-400" />
+              <span>Hybrid Mode | IT Department, YCCE</span>
+            </span>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1">
+            <span className="inline-flex items-center gap-1.5">
+              <Users className="w-4 h-4 text-amber-400" />
+              <span>Teams of 4-6 | ₹600/team</span>
+            </span>
+            <span>•</span>
+            <span className="inline-flex items-center gap-1.5">
+              <Star className="w-4 h-4 text-amber-400" />
+              <span>Partner: GDG Cloud Nagpur</span>
+            </span>
+          </div>
+        </div>
 
         {/* ========================================== */}
         {/* SLIDING POSTER VIEW SECTION                */}
@@ -212,27 +250,54 @@ export default function FooterSection({ onOpenRegister }: { onOpenRegister: () =
         {/* CTA banner inside footer */}
         <div className="w-full max-w-3xl p-6 rounded-2xl bg-[#2b1b17] border border-[#d4af37]/60 mb-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl text-left">
           <div>
-            <h4 className="font-pirate text-2xl font-bold text-amber-300">
-              SPEND LESS TIME. WIN BIG.⚡️
+            <h4 className="font-pirate text-2xl font-bold text-amber-300 flex items-center gap-2">
+              <span>SPEND LESS TIME. WIN BIG.</span>
+              <Zap className="w-5 h-5 text-amber-400 fill-amber-400" />
             </h4>
-            <p className="text-xs text-amber-200/80 font-mono mt-1">
-              🥇 ₹21,000 | 🥈 ₹15,000 | 🥉 ₹5K Capello Vouchers
-            </p>
+            <div className="text-xs text-amber-200/80 font-mono mt-1.5 flex flex-wrap items-center gap-3">
+              <span className="inline-flex items-center gap-1">
+                <Trophy className="w-4 h-4 text-amber-400" /> ₹21,000
+              </span>
+              <span>|</span>
+              <span className="inline-flex items-center gap-1">
+                <Award className="w-4 h-4 text-slate-300" /> ₹15,000
+              </span>
+              <span>|</span>
+              <span className="inline-flex items-center gap-1">
+                <Gift className="w-4 h-4 text-amber-600" /> ₹5K Capello Vouchers
+              </span>
+            </div>
             <div className="mt-2 text-xs font-mono text-amber-300/90 flex flex-wrap gap-4">
-              <span>📞 Tejasvi Jadhao: 9403315952</span>
-              <span>📞 Ojas Satdeve: 8856012282</span>
+              <span className="inline-flex items-center gap-1">
+                <Phone className="w-3.5 h-3.5 text-amber-400" /> Tejasvi Jadhao: 9403315952
+              </span>
+              <span className="inline-flex items-center gap-1">
+                <Phone className="w-3.5 h-3.5 text-amber-400" /> Ojas Satdeve: 8856012282
+              </span>
             </div>
           </div>
-          <a
-            href="https://forms.gle/GSExBRPYAzxPeDxq6"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={onOpenRegister}
-            className="px-6 py-3.5 rounded-xl font-pirate text-lg text-white font-bold btn-crimson hover:scale-105 transition-transform shrink-0 shadow-md cursor-pointer flex items-center justify-center text-center gap-2"
-          >
-            <span>REGISTER NOW</span>
-            <span>⚓</span>
-          </a>
+          <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0">
+            <a
+              href="https://forms.gle/GSExBRPYAzxPeDxq6"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={onOpenRegister}
+              className="px-6 py-3.5 rounded-xl font-pirate text-lg text-white font-bold btn-crimson hover:scale-105 transition-transform shadow-md cursor-pointer flex items-center justify-center text-center gap-2"
+            >
+              <span>REGISTER NOW</span>
+              <Anchor className="w-4 h-4 text-white" />
+            </a>
+            <a
+              href="/brochure.pdf"
+              download="Hackpreneur_Brochure.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-3.5 rounded-xl font-pirate text-base text-amber-300 font-bold bg-[#140b07] hover:bg-amber-500 hover:text-black border border-[#d4af37]/60 hover:scale-105 transition-all shadow-md cursor-pointer flex items-center justify-center text-center gap-2"
+            >
+              <Download className="w-4 h-4" />
+              <span>BROCHURE</span>
+            </a>
+          </div>
         </div>
 
         {/* Nav links */}
@@ -248,7 +313,10 @@ export default function FooterSection({ onOpenRegister }: { onOpenRegister: () =
 
         <div className="text-[11px] font-mono text-amber-400/50 border-t border-amber-900/40 pt-6 w-full flex flex-col sm:flex-row justify-between items-center gap-4">
           <span>© 2026 HACKPRENEUR. IT DEPARTMENT, YCCE. ALL RIGHTS RESERVED.</span>
-          <span>SPEND LESS TIME. WIN BIG.⚡️</span>
+          <span className="flex items-center gap-1.5">
+            <span>SPEND LESS TIME. WIN BIG.</span>
+            <Zap className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
+          </span>
         </div>
       </div>
 
@@ -263,12 +331,13 @@ export default function FooterSection({ onOpenRegister }: { onOpenRegister: () =
               <X className="w-6 h-6" />
             </button>
 
-            <div className="relative w-full h-[75vh] flex items-center justify-center">
+            <div className="relative w-full flex items-center justify-center my-auto py-2">
               <Image
                 src={posterSlides[currentSlide].src}
                 alt={posterSlides[currentSlide].title}
-                fill
-                className="object-contain"
+                width={1600}
+                height={900}
+                className="w-full max-h-[75vh] object-contain rounded-lg"
               />
             </div>
 

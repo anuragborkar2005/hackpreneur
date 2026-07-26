@@ -1,6 +1,6 @@
 "use client";
 
-import { Pause, Play } from "lucide-react";
+import { Download, Pause, Play } from "lucide-react";
 import React, { useState } from "react";
 
 interface NavbarProps {
@@ -92,6 +92,18 @@ export default function Navbar({
 
         {/* RIGHT ACTION BUTTONS matching reference image 11_12_00 AM */}
         <div className="hidden lg:flex items-center justify-center gap-3">
+          <a
+            href="/brochure.pdf"
+            download="Hackpreneur_Brochure.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-3.5 py-2.5 rounded-lg border border-[#8b5a2b]/60 bg-[#2b1b17] text-[#f4ecd8] hover:bg-[#3d271d] hover:border-[#d4af37] transition-all text-xs font-semibold flex items-center gap-1.5 shadow-md cursor-pointer"
+            title="Download Event Brochure"
+          >
+            <Download size={14} className="text-amber-400" />
+            <span>BROCHURE</span>
+          </a>
+
           <button
             onClick={onToggleSound}
             className="px-3.5 py-2.5 rounded-lg border border-[#8b5a2b]/60 bg-[#2b1b17] text-[#f4ecd8] hover:bg-[#3d271d] hover:border-[#d4af37] transition-all text-xs font-semibold flex items-center gap-2 shadow-md cursor-pointer"
@@ -162,6 +174,17 @@ export default function Navbar({
             </a>
           ))}
           <a
+            href="/brochure.pdf"
+            download="Hackpreneur_Brochure.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMobileMenuOpen(false)}
+            className="w-full py-3 rounded-lg font-pirate text-lg text-amber-300 font-bold bg-[#2b1b17] border border-[#d4af37]/60 text-center flex items-center justify-center gap-2 cursor-pointer"
+          >
+            <Download size={16} className="text-amber-400" />
+            <span>DOWNLOAD BROCHURE</span>
+          </a>
+          <a
             href="https://forms.gle/GSExBRPYAzxPeDxq6"
             target="_blank"
             rel="noopener noreferrer"
@@ -169,7 +192,7 @@ export default function Navbar({
               setMobileMenuOpen(false);
               onOpenRegister();
             }}
-            className="w-full py-3 mt-2 rounded-lg font-pirate text-lg text-white font-bold btn-crimson text-center flex items-center justify-center gap-2 cursor-pointer"
+            className="w-full py-3 rounded-lg font-pirate text-lg text-white font-bold btn-crimson text-center flex items-center justify-center gap-2 cursor-pointer"
           >
             <span>REGISTER NOW</span>
           </a>

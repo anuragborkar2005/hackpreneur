@@ -34,10 +34,10 @@ export default function AboutSection({
         <div className="max-w-2xl pt-4">
           {/* Title */}
           <div className="space-y-0.5 max-w-full">
-            <h2 className="font-pirate text-4xl sm:text-7xl font-bold tracking-tight text-[#2b1810] drop-shadow-sm leading-tight py-1 break-words">
+            <h2 className="font-pirate text-4xl sm:text-7xl font-bold tracking-tight text-[#2b1810] drop-shadow-sm leading-tight py-1 whitespace-nowrap">
               ABOUT
             </h2>
-            <h2 className="font-pirate text-4xl sm:text-8xl font-extrabold tracking-wide text-[#8c1d1a] drop-shadow-md leading-tight py-1 break-words">
+            <h2 className="font-pirate text-4xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-[#8c1d1a] drop-shadow-md leading-tight py-1 whitespace-nowrap">
               HACKPRENEUR
             </h2>
           </div>

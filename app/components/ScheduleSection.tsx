@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import { Calendar, Clock } from "lucide-react";
 
 interface TimelineStep {
   id: string;
@@ -14,6 +15,7 @@ interface TimelineStep {
   color: string;
   titleColor: string;
   offsetY: string;
+  isLive?: boolean;
 }
 
 export default function ScheduleSection() {
@@ -30,6 +32,7 @@ export default function ScheduleSection() {
       color: "bg-[#8b1e1b]",
       titleColor: "text-[#8b1e1b]",
       offsetY: "lg:translate-y-6",
+      isLive: true,
     },
     {
       id: "02",
@@ -40,7 +43,7 @@ export default function ScheduleSection() {
       image: "/images/timeline_step3.jpg",
       color: "bg-[#5c3e1e]",
       titleColor: "text-[#5c3e1e]",
-      offsetY: "lg:translate-y-4",
+      offsetY: "lg:-translate-y-4",
     },
     {
       id: "03",
@@ -52,7 +55,7 @@ export default function ScheduleSection() {
       image: "/images/timeline_step4.jpg",
       color: "bg-[#1c4d29]",
       titleColor: "text-[#1c4d29]",
-      offsetY: "lg:-translate-y-4",
+      offsetY: "lg:translate-y-4",
     },
     {
       id: "04",
@@ -64,7 +67,7 @@ export default function ScheduleSection() {
       image: "/images/timeline_step2.jpg",
       color: "bg-[#1b2a4a]",
       titleColor: "text-[#1b2a4a]",
-      offsetY: "lg:-translate-y-3",
+      offsetY: "lg:-translate-y-4",
     },
     {
       id: "05",
@@ -76,7 +79,7 @@ export default function ScheduleSection() {
       image: "/images/timeline_step5.jpg",
       color: "bg-[#4a1b42]",
       titleColor: "text-[#4a1b42]",
-      offsetY: "lg:translate-y-3",
+      offsetY: "lg:translate-y-2",
     },
     {
       id: "06",
@@ -138,16 +141,16 @@ export default function ScheduleSection() {
             >
               {/* Curved bezier path passing EXACTLY through all 6 circle badge centers */}
               <path
-                d="M 20,100 C 60,100 70,100 100,100 C 180,100 220,64 300,64 C 380,64 420,92 500,92 C 580,92 620,60 700,60 C 780,60 820,88 900,88 C 980,88 1020,76 1100,76 L 1165,76"
+                d="M 20,104 C 60,104 70,104 100,104 C 180,104 220,64 300,64 C 380,64 420,96 500,96 C 580,96 620,64 700,64 C 780,64 820,88 900,88 C 980,88 1020,80 1100,80 L 1165,80"
                 stroke="#5c381e"
                 strokeWidth="3.5"
                 strokeDasharray="9 7"
                 strokeLinecap="round"
               />
               {/* Start point dot */}
-              <circle cx="20" cy="100" r="5" fill="#5c381e" />
+              <circle cx="20" cy="104" r="5" fill="#5c381e" />
               {/* End arrow head */}
-              <polygon points="1165,70 1182,76 1165,82" fill="#5c381e" />
+              <polygon points="1165,74 1182,80 1165,86" fill="#5c381e" />
             </svg>
           </div>
 
@@ -164,8 +167,17 @@ export default function ScheduleSection() {
                       : "hover:scale-102 opacity-95 hover:opacity-100"
                   }`}
                 >
-                  {/* FLAG BADGE */}
-                  <div className="relative mb-2">
+                  {/* FLAG BADGE & LIVE INDICATOR */}
+                  <div className="mb-2 flex flex-col items-center gap-1.5 min-h-[28px] justify-end">
+                    {step.isLive && (
+                      <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-red-600 border border-amber-300 text-white font-mono text-[10px] font-extrabold tracking-wider uppercase shadow-[0_0_12px_rgba(220,38,38,0.8)] animate-pulse">
+                        <span className="relative flex h-2 w-2">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                          <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                        </span>
+                        <span>LIVE NOW</span>
+                      </div>
+                    )}
                     <div className="px-3.5 py-1 bg-[#1e120d] text-white font-pirate text-xs font-bold rounded-t-md shadow-md border-b-2 border-[#d4af37] flex items-center justify-center gap-1">
                       <span>{step.num}</span>
                     </div>
@@ -173,7 +185,11 @@ export default function ScheduleSection() {
 
                   {/* CIRCULAR IMAGE BADGE */}
                   <div
-                    className="w-20 h-20 sm:w-22 sm:h-22 rounded-full border-4 border-[#d4af37] shadow-xl relative overflow-hidden group-hover:rotate-6 group-hover:scale-105 transition-all duration-300 bg-[#3a2012]"
+                    className={`w-20 h-20 sm:w-22 sm:h-22 rounded-full border-4 ${
+                      step.isLive
+                        ? "border-red-500 shadow-[0_0_20px_rgba(239,68,68,0.7)] animate-pulse"
+                        : "border-[#d4af37] shadow-xl"
+                    } relative overflow-hidden group-hover:rotate-6 group-hover:scale-105 transition-all duration-300 bg-[#3a2012]`}
                   >
                     <Image
                       src={step.image}
@@ -203,13 +219,19 @@ export default function ScheduleSection() {
 
                   {/* DATE CARD */}
                   <div className="mt-3 px-3 py-1.5 rounded-xl bg-[#e6d8b8] border border-[#c8a355] shadow-xs text-[11px] sm:text-xs font-mono font-bold text-[#2b1810] flex flex-col items-center gap-0.5">
-                    <div className="flex items-center gap-1">
-                      <span>📅</span>
+                    <div className="flex items-center gap-1.5">
+                      <Calendar className="w-3.5 h-3.5 text-[#8b1e1b]" />
                       <span>{step.date}</span>
                     </div>
                     {step.time && (
-                      <span className="text-[10px] text-[#8b1e1b] font-semibold">
-                        {step.time}
+                      <span className="text-[10px] text-[#8b1e1b] font-semibold flex items-center gap-1">
+                        <Clock className="w-3 h-3 text-[#8b1e1b]" />
+                        <span>{step.time}</span>
+                      </span>
+                    )}
+                    {step.isLive && (
+                      <span className="px-2 py-0.5 rounded-md bg-red-600 text-white font-mono text-[9px] font-black uppercase tracking-widest animate-pulse mt-0.5">
+                        LIVE
                       </span>
                     )}
                   </div>

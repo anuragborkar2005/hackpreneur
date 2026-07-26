@@ -12,7 +12,7 @@ import SponsorsSection from "./components/SponsorsSection";
 import FooterSection from "./components/FooterSection";
 import RegistrationModal from "./components/RegistrationModal";
 import AmbientAudio from "./components/AmbientAudio";
-import { Anchor } from "lucide-react";
+import { Anchor, Download } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
@@ -116,8 +116,19 @@ export default function Home() {
                 </a>
 
                 <a
-                  href="#events"
+                  href="/brochure.pdf"
+                  download="Hackpreneur_Brochure.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-6 py-3.5 rounded-xl font-pirate text-base sm:text-lg text-[#1e120d] font-bold bg-[#e6d8b8] hover:bg-[#f3e5ab] border border-[#c8a355] shadow-md hover:scale-105 active:scale-95 transition-all cursor-pointer flex items-center gap-2"
+                >
+                  <Download className="w-5 h-5 text-[#8b1e1b]" />
+                  <span>DOWNLOAD BROCHURE</span>
+                </a>
+
+                <a
+                  href="#events"
+                  className="px-6 py-3.5 rounded-xl font-pirate text-base sm:text-lg text-[#1e120d] font-bold bg-[#e6d8b8]/80 hover:bg-[#e6d8b8] border border-[#c8a355]/60 shadow-md hover:scale-105 active:scale-95 transition-all cursor-pointer flex items-center gap-2"
                 >
                   <span>EXPLORE ALL EVENTS</span>
                 </a>
