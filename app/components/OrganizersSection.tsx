@@ -59,15 +59,44 @@ export default function OrganizersSection() {
         {/* CREW GRID: PARCHMENT CARDS FOR LEADERSHIP & ORGANIZERS */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 items-stretch">
 
-          {/* 1. PRESIDENT CSI (Col 12 on lg) */}
-          <div className="lg:col-span-12 bg-[#f6ebd4] border-2 border-[#b89562] rounded-2xl p-6 shadow-xl relative flex flex-col justify-between overflow-hidden max-w-2xl mx-auto w-full">
+          {/* 1. PRESIDENT SPIRIT (Col 4 on lg) */}
+          <div className="lg:col-span-4 bg-[#f6ebd4] border-2 border-[#b89562] rounded-2xl p-6 shadow-xl relative flex flex-col justify-between overflow-hidden w-full">
             {/* Header Banner */}
-            <div className="w-full bg-[#3a2012] text-[#fce8c3] py-2 px-3 rounded-lg text-center font-pirate text-xl tracking-wider font-bold mb-6 flex items-center justify-center gap-2 border border-[#8c5a2b]">
+            <div className="w-full bg-[#3a2012] text-[#fce8c3] py-2 px-3 rounded-lg text-center font-pirate text-lg sm:text-xl tracking-wider font-bold mb-6 flex items-center justify-center gap-2 border border-[#8c5a2b]">
+              <span>PRESIDENT SPIRIT</span>
+            </div>
+
+            {/* Member */}
+            <div className="flex flex-col items-center text-center my-auto">
+              <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full p-1 bg-gradient-to-b from-[#d4af37] via-[#8c5a2b] to-[#3a2012] shadow-lg mb-3">
+                <div className="w-full h-full rounded-full overflow-hidden relative border-2 border-[#f6ebd4]">
+                  <Image
+                    src="/organisers/Aditya_Gaour.png"
+                    alt="Aditya Gaour"
+                    fill
+                    sizes="128px"
+                    className="object-cover object-top"
+                  />
+                </div>
+              </div>
+              <h4 className="font-serif font-bold text-xl text-[#2b1810] leading-tight">
+                Aditya Gaour
+              </h4>
+              <span className="inline-block mt-2 px-4 py-1 bg-[#8c1d1a] text-[#fce8c3] text-xs sm:text-sm font-pirate tracking-wider rounded-full shadow-sm">
+                President • Spirit
+              </span>
+            </div>
+          </div>
+
+          {/* 2. PRESIDENT CSI (Col 4 on lg - CENTER) */}
+          <div className="lg:col-span-4 bg-[#f6ebd4] border-2 border-[#b89562] rounded-2xl p-6 shadow-xl relative flex flex-col justify-between overflow-hidden w-full">
+            {/* Header Banner */}
+            <div className="w-full bg-[#3a2012] text-[#fce8c3] py-2 px-3 rounded-lg text-center font-pirate text-lg sm:text-xl tracking-wider font-bold mb-6 flex items-center justify-center gap-2 border border-[#8c5a2b]">
               <span>PRESIDENT CSI</span>
             </div>
 
             {/* Member */}
-            <div className="flex flex-col items-center text-center mb-4">
+            <div className="flex flex-col items-center text-center my-auto">
               <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full p-1 bg-gradient-to-b from-[#d4af37] via-[#8c5a2b] to-[#3a2012] shadow-lg mb-3">
                 <div className="w-full h-full rounded-full overflow-hidden relative border-2 border-[#f6ebd4]">
                   <Image
@@ -82,8 +111,37 @@ export default function OrganizersSection() {
               <h4 className="font-serif font-bold text-xl text-[#2b1810] leading-tight">
                 Advait Kadoo
               </h4>
-              <span className="inline-block mt-2 px-4 py-1 bg-[#8c1d1a] text-[#fce8c3] text-sm font-pirate tracking-wider rounded-full shadow-sm">
-                President • Computer Society of India
+              <span className="inline-block mt-2 px-4 py-1 bg-[#8c1d1a] text-[#fce8c3] text-xs sm:text-sm font-pirate tracking-wider rounded-full shadow-sm">
+                President • CSI
+              </span>
+            </div>
+          </div>
+
+          {/* 3. PRESIDENT AURA (Col 4 on lg) */}
+          <div className="lg:col-span-4 bg-[#f6ebd4] border-2 border-[#b89562] rounded-2xl p-6 shadow-xl relative flex flex-col justify-between overflow-hidden w-full">
+            {/* Header Banner */}
+            <div className="w-full bg-[#3a2012] text-[#fce8c3] py-2 px-3 rounded-lg text-center font-pirate text-lg sm:text-xl tracking-wider font-bold mb-6 flex items-center justify-center gap-2 border border-[#8c5a2b]">
+              <span>PRESIDENT AURA</span>
+            </div>
+
+            {/* Member */}
+            <div className="flex flex-col items-center text-center my-auto">
+              <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full p-1 bg-gradient-to-b from-[#d4af37] via-[#8c5a2b] to-[#3a2012] shadow-lg mb-3">
+                <div className="w-full h-full rounded-full overflow-hidden relative border-2 border-[#f6ebd4]">
+                  <Image
+                    src="/organisers/Tanushree_Meshram.png"
+                    alt="Tanushree Meshram"
+                    fill
+                    sizes="128px"
+                    className="object-cover object-top"
+                  />
+                </div>
+              </div>
+              <h4 className="font-serif font-bold text-xl text-[#2b1810] leading-tight">
+                Tanushree Meshram
+              </h4>
+              <span className="inline-block mt-2 px-4 py-1 bg-[#8c1d1a] text-[#fce8c3] text-xs sm:text-sm font-pirate tracking-wider rounded-full shadow-sm">
+                President • Aura
               </span>
             </div>
           </div>
