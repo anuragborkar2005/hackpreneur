@@ -22,7 +22,6 @@ export default function Navbar({
 
     const navItems = [
         { id: "home", label: "HOME" },
-        { id: "events", label: "TECHFEST EVENTS" },
         { id: "about", label: "ABOUT" },
         { id: "sponsors", label: "SPONSORS" },
         { id: "organizers", label: "ORGANIZERS" },

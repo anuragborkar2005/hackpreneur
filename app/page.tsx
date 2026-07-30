@@ -131,13 +131,6 @@ export default function Home() {
                                     <Download className="w-5 h-5 text-[#8b1e1b]" />
                                     <span>DOWNLOAD BROCHURE</span>
                                 </a>
-
-                                <a
-                                    href="#events"
-                                    className="px-6 py-3.5 rounded-xl font-pirate text-base sm:text-lg text-[#1e120d] font-bold bg-[#e6d8b8]/80 hover:bg-[#e6d8b8] border border-[#c8a355]/60 shadow-md hover:scale-105 active:scale-95 transition-all cursor-pointer flex items-center gap-2"
-                                >
-                                    <span>EXPLORE ALL EVENTS</span>
-                                </a>
                             </div>
 
                             {/* WOOD PLANK COUNTDOWN TIMER BOX */}
