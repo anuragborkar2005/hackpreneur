@@ -80,7 +80,7 @@ export default function OrganizersSection() {
                 </div>
               </div>
               <h4 className="font-serif font-bold text-xl text-[#2b1810] leading-tight">
-                Aditya Gaour
+                Aditya Gour
               </h4>
               <span className="inline-block mt-2 px-4 py-1 bg-[#8c1d1a] text-[#fce8c3] text-xs sm:text-sm font-pirate tracking-wider rounded-full shadow-sm">
                 President • Spirit
